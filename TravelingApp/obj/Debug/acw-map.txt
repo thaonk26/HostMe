@@ -6,3 +6,7 @@ TravelingApp.MainActivity, TravelingApp;md5f0a9a422d76cd9d879faf99eadcedaa5.Main
 TravelingApp.MainActivity, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity
 TravelingApp.MainActivity;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity
 travelingapp.MainActivity;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity
+TravelingApp.SlidingTabStrip, TravelingApp;md5f0a9a422d76cd9d879faf99eadcedaa5.SlidingTabStrip
+TravelingApp.SlidingTabStrip, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0a9a422d76cd9d879faf99eadcedaa5.SlidingTabStrip
+TravelingApp.SlidingTabStrip;md5f0a9a422d76cd9d879faf99eadcedaa5.SlidingTabStrip
+travelingapp.SlidingTabStrip;md5f0a9a422d76cd9d879faf99eadcedaa5.SlidingTabStrip

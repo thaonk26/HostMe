@@ -41,7 +41,7 @@ namespace TravelingApp
             mProgressBar.Visibility = ViewStates.Visible;
             Thread thread = new Thread(ActLikeARequest);
             thread.Start();
-
+            //send password to db here
 
         }
 
@@ -50,7 +50,7 @@ namespace TravelingApp
             Thread.Sleep(3000);
 
             RunOnUiThread(() => { mProgressBar.Visibility = ViewStates.Invisible; });
-            int x = Resource.Animation.slide_right;
+            //int x = Resource.Animation.slide_right;
         }
     }
 }
