@@ -26,7 +26,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textSize="15dp"
-        android:id="@+id/btnSignin" />
+        android:id="@+id/btnSignin"
+        android:background="@drawable/buttonsigninstyle" />
     <TextView
         android:text="Or"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -45,7 +46,8 @@
         android:layout_marginRight="20dp"
         android:textSize="15sp"
         android:id="@+id/btnSignUp"
-        android:drawableLeft="@drawable/email-server-png-3" />
+        android:drawableLeft="@drawable/emailicon2"
+        android:background="@drawable/buttonsignup" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +59,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/progressBar1"
             android:indeterminate="true"
-            android:layout_below="@id/progressBar1"
-            android:background="@drawable/progressbarstyle" />
+            android:background="@drawable/progressbarstyle"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 </LinearLayout>

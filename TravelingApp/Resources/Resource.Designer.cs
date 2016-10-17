@@ -28,11 +28,30 @@ namespace TravelingApp
 		{
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int slide_right = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int slide_up = 2130968577;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int firstCurrency = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int firstCurrency = 2131099648;
 			
 			static Array()
 			{
@@ -61,16 +80,25 @@ namespace TravelingApp
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int ButtonSignInStyle = 2130837504;
+			public const int buttonsigninstyle = 2130837504;
 			
 			// aapt resource value: 0x7f020001
 			public const int ButtonSignUp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int edit_text_style = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int ProgressBarStyle = 2130837507;
+			public const int emailIcon = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int emailIcon2 = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int Icon = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int ProgressBarStyle = 2130837510;
 			
 			static Drawable()
 			{
@@ -85,20 +113,32 @@ namespace TravelingApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int btnSignUp = 2131099651;
+			// aapt resource value: 0x7f080003
+			public const int btnDialogEmail = 2131230723;
 			
-			// aapt resource value: 0x7f060001
-			public const int btnSignin = 2131099649;
+			// aapt resource value: 0x7f080007
+			public const int btnSignUp = 2131230727;
 			
-			// aapt resource value: 0x7f060004
-			public const int progressBar1 = 2131099652;
+			// aapt resource value: 0x7f080005
+			public const int btnSignin = 2131230725;
 			
-			// aapt resource value: 0x7f060000
-			public const int txtCreateAccount = 2131099648;
+			// aapt resource value: 0x7f080008
+			public const int progressBar1 = 2131230728;
 			
-			// aapt resource value: 0x7f060002
-			public const int txtOr = 2131099650;
+			// aapt resource value: 0x7f080004
+			public const int txtCreateAccount = 2131230724;
+			
+			// aapt resource value: 0x7f080001
+			public const int txtEmail = 2131230721;
+			
+			// aapt resource value: 0x7f080000
+			public const int txtFirstName = 2131230720;
+			
+			// aapt resource value: 0x7f080006
+			public const int txtOr = 2131230726;
+			
+			// aapt resource value: 0x7f080002
+			public const int txtPassword = 2131230722;
 			
 			static Id()
 			{
@@ -114,7 +154,10 @@ namespace TravelingApp
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int dialog_sign_up = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -129,14 +172,14 @@ namespace TravelingApp
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
-			// aapt resource value: 0x7f040002
-			public const int firstSpinner = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int firstSpinner = 2131034114;
 			
 			static String()
 			{
@@ -144,6 +187,22 @@ namespace TravelingApp
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int dialog_animation = 2131165184;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
