@@ -6,7 +6,8 @@
     android:background="@android:color/background_dark"
     android:weightSum="100"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:id="@+id/content_fragment">
     <TextView
         android:text="Create an Account"
         android:textAppearance="?android:attr/textAppearanceMedium"

@@ -5,6 +5,12 @@ using System;
 using System.Collections;
 using Android.Views;
 using System.Threading;
+using System.Net;
+using SQLite.Extensions;
+using SQLite;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace TravelingApp
 {
@@ -13,6 +19,7 @@ namespace TravelingApp
     {
         private Button mBtnSignUp;
         private ProgressBar mProgressBar;
+        private EditText txtUserName, txtEmail, txtPassword;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -23,6 +30,9 @@ namespace TravelingApp
 
             mBtnSignUp = FindViewById<Button>(Resource.Id.btnSignUp);
             mProgressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
+            txtUserName = FindViewById<EditText>(Resource.Id.txtUserName);
+            txtEmail = FindViewById<EditText>(Resource.Id.txtEmail);
+            txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
 
             mBtnSignUp.Click += (object sender, EventArgs args) =>
             {
@@ -33,8 +43,9 @@ namespace TravelingApp
 
                 signUpDialog.mOnSignUpComplete += signUpDialog_mOnSignUpComplete;
             };
+           
         }
-
+       
         void signUpDialog_mOnSignUpComplete(object sender, OnSignUpEventArgs e)
         {
 
@@ -42,6 +53,7 @@ namespace TravelingApp
             Thread thread = new Thread(ActLikeARequest);
             thread.Start();
             //send password to db here
+             
 
         }
 
@@ -51,6 +63,35 @@ namespace TravelingApp
 
             RunOnUiThread(() => { mProgressBar.Visibility = ViewStates.Invisible; });
             //int x = Resource.Animation.slide_right;
+        }
+        private string createDatabase(string path)
+        {
+            try
+            {
+                var connection = new SQLiteAsyncConnection(path);
+                {
+                    connection.CreateTableAsync<Person>();
+                    return "Database created";
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                return ex.Message;
+            }
+        }
+        private async Task<string> insertUpdateData(Person data, string path)
+        {
+            try
+            {
+                var db = new SQLiteAsyncConnection(path);
+                if (await db.InsertAsync(data) != 0)
+                    db.UpdateAsync(data);
+                return "Single data file inserted or updated";
+            }
+            catch (SQLiteException ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }

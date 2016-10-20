@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace TravelingApp
 {
@@ -46,7 +48,7 @@ namespace TravelingApp
 
     class dialog_SignUp : DialogFragment
     {
-        private EditText mTxtFirstName;
+        private EditText mTxtUserName;
         private EditText mTxtEmail;
         private EditText mTxtPassword;
         private Button mBtnSignUp;
@@ -59,7 +61,7 @@ namespace TravelingApp
 
             var view = inflater.Inflate(Resource.Layout.dialog_sign_up, container, false);
 
-            mTxtFirstName = view.FindViewById<EditText>(Resource.Id.txtFirstName);
+            mTxtUserName = view.FindViewById<EditText>(Resource.Id.txtUserName);
             mTxtEmail = view.FindViewById<EditText>(Resource.Id.txtEmail);
             mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword);
             mBtnSignUp = view.FindViewById<Button>(Resource.Id.btnDialogEmail);
@@ -72,7 +74,30 @@ namespace TravelingApp
         void mBtnSignUp_Click(object sender, EventArgs e)
         {
             //User has clicked the sign up button
-            mOnSignUpComplete.Invoke(this, new OnSignUpEventArgs(mTxtFirstName.Text, mTxtEmail.Text, mTxtPassword.Text));
+            mOnSignUpComplete.Invoke(this, new OnSignUpEventArgs(mTxtUserName.Text, mTxtEmail.Text, mTxtPassword.Text));
+            MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=reflex;User Id=flex;Password=asd123;charset=utf8");
+            try
+            {
+
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO UserInfo(UserName, Email, Password) VALUES(@UserName,@Email, @Password)", con);
+                    cmd.Parameters.AddWithValue("@UserName", mTxtUserName.Text);
+                    cmd.Parameters.AddWithValue("@Email", mTxtEmail.Text);
+                    cmd.Parameters.AddWithValue("@Password", mTxtPassword.Text);
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
             this.Dismiss();
         }
 

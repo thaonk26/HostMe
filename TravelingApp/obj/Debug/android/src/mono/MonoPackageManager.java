@@ -99,6 +99,11 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "TravelingApp.dll" comes first in this list. */
 		"TravelingApp.dll",
+		"MySql.Data.CF.dll",
+		"SQLite-net.dll",
+		"SQLitePCL.raw.dll",
+		"Xamarin.Android.Support.v13.dll",
+		"Xamarin.Android.Support.v4.dll",
 		"System.Threading.dll",
 		"System.Runtime.dll",
 		"System.Collections.dll",
@@ -109,6 +114,9 @@ class MonoPackageManager_Resources {
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
+		"System.Linq.Expressions.dll",
+		"System.Threading.Tasks.dll",
+		"System.Resources.ResourceManager.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
