@@ -27,7 +27,15 @@ namespace TravelingApp
             mBtnSavedItems = FindViewById<Button>(Resource.Id.btnSavedItems);
             mBtnChangePassword = FindViewById<Button>(Resource.Id.btnChangePassword);
 
+            mBtnChangePassword.Click += (object sender, EventArgs args) =>
+            {
+                //Pull up dialog
+                FragmentTransaction transaction = FragmentManager.BeginTransaction(); //This pulls up the dialog
+                dialog_Change_Password changePassword = new dialog_Change_Password();
+                changePassword.Show(transaction, "dialog fragment");
 
+
+            };
         }
     }
 }

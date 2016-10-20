@@ -119,53 +119,62 @@ namespace TravelingApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09000d
-			public const int btnChangePassword = 2131296269;
-			
-			// aapt resource value: 0x7f090004
-			public const int btnDialogEmail = 2131296260;
-			
-			// aapt resource value: 0x7f090002
-			public const int btnDialogSignIn = 2131296258;
-			
-			// aapt resource value: 0x7f09000e
-			public const int btnSavedItems = 2131296270;
-			
-			// aapt resource value: 0x7f090009
-			public const int btnSignUp = 2131296265;
-			
-			// aapt resource value: 0x7f090007
-			public const int btnSignin = 2131296263;
-			
-			// aapt resource value: 0x7f090005
-			public const int content_fragment = 2131296261;
-			
-			// aapt resource value: 0x7f09000c
-			public const int imgProfile = 2131296268;
-			
-			// aapt resource value: 0x7f09000f
-			public const int menu = 2131296271;
-			
-			// aapt resource value: 0x7f09000b
-			public const int progressBar1 = 2131296267;
-			
-			// aapt resource value: 0x7f090006
-			public const int txtCreateAccount = 2131296262;
-			
-			// aapt resource value: 0x7f090000
-			public const int txtEmail = 2131296256;
+			// aapt resource value: 0x7f090003
+			public const int btnChangePassword = 2131296259;
 			
 			// aapt resource value: 0x7f090008
-			public const int txtOr = 2131296264;
+			public const int btnDialogEmail = 2131296264;
 			
-			// aapt resource value: 0x7f090001
-			public const int txtPassword = 2131296257;
+			// aapt resource value: 0x7f090006
+			public const int btnDialogSignIn = 2131296262;
+			
+			// aapt resource value: 0x7f090011
+			public const int btnSavedItems = 2131296273;
+			
+			// aapt resource value: 0x7f09000d
+			public const int btnSignUp = 2131296269;
+			
+			// aapt resource value: 0x7f09000b
+			public const int btnSignin = 2131296267;
+			
+			// aapt resource value: 0x7f090009
+			public const int content_fragment = 2131296265;
+			
+			// aapt resource value: 0x7f090010
+			public const int imgProfile = 2131296272;
+			
+			// aapt resource value: 0x7f090012
+			public const int menu = 2131296274;
+			
+			// aapt resource value: 0x7f09000f
+			public const int progressBar1 = 2131296271;
+			
+			// aapt resource value: 0x7f090002
+			public const int txtConfirmNewPassword = 2131296258;
 			
 			// aapt resource value: 0x7f09000a
-			public const int txtSysLog = 2131296266;
+			public const int txtCreateAccount = 2131296266;
 			
-			// aapt resource value: 0x7f090003
-			public const int txtUserName = 2131296259;
+			// aapt resource value: 0x7f090000
+			public const int txtCurrentPassword = 2131296256;
+			
+			// aapt resource value: 0x7f090004
+			public const int txtEmail = 2131296260;
+			
+			// aapt resource value: 0x7f090001
+			public const int txtNewPassword = 2131296257;
+			
+			// aapt resource value: 0x7f09000c
+			public const int txtOr = 2131296268;
+			
+			// aapt resource value: 0x7f090005
+			public const int txtPassword = 2131296261;
+			
+			// aapt resource value: 0x7f09000e
+			public const int txtSysLog = 2131296270;
+			
+			// aapt resource value: 0x7f090007
+			public const int txtUserName = 2131296263;
 			
 			static Id()
 			{

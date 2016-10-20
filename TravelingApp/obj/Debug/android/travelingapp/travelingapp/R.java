@@ -29,22 +29,25 @@ public final class R {
         public static final int xs=0x7f020008;
     }
     public static final class id {
-        public static final int btnChangePassword=0x7f09000d;
-        public static final int btnDialogEmail=0x7f090004;
-        public static final int btnDialogSignIn=0x7f090002;
-        public static final int btnSavedItems=0x7f09000e;
-        public static final int btnSignUp=0x7f090009;
-        public static final int btnSignin=0x7f090007;
-        public static final int content_fragment=0x7f090005;
-        public static final int imgProfile=0x7f09000c;
-        public static final int menu=0x7f09000f;
-        public static final int progressBar1=0x7f09000b;
-        public static final int txtCreateAccount=0x7f090006;
-        public static final int txtEmail=0x7f090000;
-        public static final int txtOr=0x7f090008;
-        public static final int txtPassword=0x7f090001;
-        public static final int txtSysLog=0x7f09000a;
-        public static final int txtUserName=0x7f090003;
+        public static final int btnChangePassword=0x7f090003;
+        public static final int btnDialogEmail=0x7f090008;
+        public static final int btnDialogSignIn=0x7f090006;
+        public static final int btnSavedItems=0x7f090011;
+        public static final int btnSignUp=0x7f09000d;
+        public static final int btnSignin=0x7f09000b;
+        public static final int content_fragment=0x7f090009;
+        public static final int imgProfile=0x7f090010;
+        public static final int menu=0x7f090012;
+        public static final int progressBar1=0x7f09000f;
+        public static final int txtConfirmNewPassword=0x7f090002;
+        public static final int txtCreateAccount=0x7f09000a;
+        public static final int txtCurrentPassword=0x7f090000;
+        public static final int txtEmail=0x7f090004;
+        public static final int txtNewPassword=0x7f090001;
+        public static final int txtOr=0x7f09000c;
+        public static final int txtPassword=0x7f090005;
+        public static final int txtSysLog=0x7f09000e;
+        public static final int txtUserName=0x7f090007;
     }
     public static final class layout {
         public static final int dialog_change_password=0x7f030000;
