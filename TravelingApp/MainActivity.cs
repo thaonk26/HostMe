@@ -11,6 +11,7 @@ using SQLite;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Android.Content;
 
 namespace TravelingApp
 {
@@ -20,7 +21,7 @@ namespace TravelingApp
         private Button mBtnSignUp;
         private Button mBtnSignIn;
         private ProgressBar mProgressBar;
-        private EditText txtUserName, txtEmail, txtPassword;
+  
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,9 +33,7 @@ namespace TravelingApp
             mBtnSignIn = FindViewById<Button>(Resource.Id.btnSignin);
             mBtnSignUp = FindViewById<Button>(Resource.Id.btnSignUp);
             mProgressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
-            txtUserName = FindViewById<EditText>(Resource.Id.txtUserName);
-            txtEmail = FindViewById<EditText>(Resource.Id.txtEmail);
-            txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
+
 
             mBtnSignIn.Click += (object sender, EventArgs args) =>
             {
@@ -52,15 +51,18 @@ namespace TravelingApp
                 signUpDialog.Show(transaction, "dialog fragment");
 
                 signUpDialog.mOnSignUpComplete += signUpDialog_mOnSignUpComplete;
+
             };
            
         }
 
-        private void SignInDialog_mOnSignInComplete(object sender, OnSignUpEventArgs e)
+        private void SignInDialog_mOnSignInComplete(object sender, OnSignInEventArgs e)
         {
             mProgressBar.Visibility = ViewStates.Visible;
             Thread thread = new Thread(ActLikeARequest);
             thread.Start();
+
+            StartActivity(typeof(ProfileActivity));
         }
 
         void signUpDialog_mOnSignUpComplete(object sender, OnSignUpEventArgs e)
@@ -70,8 +72,7 @@ namespace TravelingApp
             Thread thread = new Thread(ActLikeARequest);
             thread.Start();
             //send password to db here
-             
-
+            
         }
 
         private void ActLikeARequest()
@@ -79,6 +80,8 @@ namespace TravelingApp
             Thread.Sleep(3000);
 
             RunOnUiThread(() => { mProgressBar.Visibility = ViewStates.Invisible; });
+            Intent intent = new Intent(this, typeof(ProfileActivity));
+            StartActivity(intent);
             //int x = Resource.Animation.slide_right;
         }
         private string createDatabase(string path)

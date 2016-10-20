@@ -29,30 +29,28 @@ public final class R {
         public static final int xs=0x7f020008;
     }
     public static final class id {
-        public static final int btnDialogEmail=0x7f090003;
-        public static final int btnSignUp=0x7f09000a;
-        public static final int btnSignin=0x7f090008;
-        public static final int content_fragment=0x7f090006;
-        public static final int item_subtitle=0x7f09000c;
-        public static final int item_title=0x7f09000d;
-        public static final int menu=0x7f090010;
+        public static final int btnChangePassword=0x7f09000d;
+        public static final int btnDialogEmail=0x7f090004;
+        public static final int btnDialogSignIn=0x7f090002;
+        public static final int btnSavedItems=0x7f09000e;
+        public static final int btnSignUp=0x7f090009;
+        public static final int btnSignin=0x7f090007;
+        public static final int content_fragment=0x7f090005;
+        public static final int imgProfile=0x7f09000c;
+        public static final int menu=0x7f09000f;
         public static final int progressBar1=0x7f09000b;
-        public static final int sample_content_fragment=0x7f09000f;
-        public static final int sample_main_layout=0x7f09000e;
-        public static final int sliding_tabs=0x7f090004;
-        public static final int txtCreateAccount=0x7f090007;
-        public static final int txtEmail=0x7f090001;
-        public static final int txtOr=0x7f090009;
-        public static final int txtPassword=0x7f090002;
-        public static final int txtUserName=0x7f090000;
-        public static final int viewpager=0x7f090005;
+        public static final int txtCreateAccount=0x7f090006;
+        public static final int txtEmail=0x7f090000;
+        public static final int txtOr=0x7f090008;
+        public static final int txtPassword=0x7f090001;
+        public static final int txtSysLog=0x7f09000a;
+        public static final int txtUserName=0x7f090003;
     }
     public static final class layout {
-        public static final int dialog_sign_up=0x7f030000;
-        public static final int fragment_sample=0x7f030001;
+        public static final int dialog_sign_in=0x7f030000;
+        public static final int dialog_sign_up=0x7f030001;
         public static final int main=0x7f030002;
-        public static final int pager_item=0x7f030003;
-        public static final int scrollmain=0x7f030004;
+        public static final int profilepage=0x7f030003;
     }
     public static final class menu {
         public static final int actionbar_main=0x7f080000;

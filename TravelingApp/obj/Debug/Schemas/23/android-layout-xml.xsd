@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>10/20/2016 7:51:21 AM</xs:documentation>
+    <xs:documentation>10/20/2016 11:37:35 AM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -91,8 +91,6 @@
       <xs:element ref="android.support.v4.view.PagerTabStrip" />
       <xs:element ref="android.support.v4.view.ViewPager" />
       <xs:element ref="android.support.v4.app.FragmentTabHost" />
-      <xs:element ref="TravelingApp.SlidingTabScrollView" />
-      <xs:element ref="TravelingApp.SlidingTabStrip" />
     </xs:choice>
   </xs:group>
   <xs:element name="CheckBox" type="CheckBox">
@@ -316,31 +314,10 @@
     <xs:attribute ref="android:foregroundTint" />
     <xs:attribute ref="android:foregroundTintMode" />
     <xs:attribute ref="android:scrollIndicators" />
-    <xs:attribute ref="android:layout_toLeftOf" />
-    <xs:attribute ref="android:layout_toRightOf" />
-    <xs:attribute ref="android:layout_above" />
-    <xs:attribute ref="android:layout_below" />
-    <xs:attribute ref="android:layout_alignBaseline" />
-    <xs:attribute ref="android:layout_alignLeft" />
-    <xs:attribute ref="android:layout_alignTop" />
-    <xs:attribute ref="android:layout_alignRight" />
-    <xs:attribute ref="android:layout_alignBottom" />
-    <xs:attribute ref="android:layout_alignParentLeft" />
-    <xs:attribute ref="android:layout_alignParentTop" />
-    <xs:attribute ref="android:layout_alignParentRight" />
-    <xs:attribute ref="android:layout_alignParentBottom" />
-    <xs:attribute ref="android:layout_centerInParent" />
-    <xs:attribute ref="android:layout_centerHorizontal" />
-    <xs:attribute ref="android:layout_centerVertical" />
-    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
-    <xs:attribute ref="android:layout_toStartOf" />
-    <xs:attribute ref="android:layout_toEndOf" />
-    <xs:attribute ref="android:layout_alignStart" />
-    <xs:attribute ref="android:layout_alignEnd" />
-    <xs:attribute ref="android:layout_alignParentStart" />
-    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
+    <xs:attribute ref="android:layout_weight" />
+    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1394,31 +1371,10 @@
     <xs:attribute ref="android:fragmentReenterTransition" />
     <xs:attribute ref="android:fragmentAllowEnterTransitionOverlap" />
     <xs:attribute ref="android:fragmentAllowReturnTransitionOverlap" />
-    <xs:attribute ref="android:layout_toLeftOf" />
-    <xs:attribute ref="android:layout_toRightOf" />
-    <xs:attribute ref="android:layout_above" />
-    <xs:attribute ref="android:layout_below" />
-    <xs:attribute ref="android:layout_alignBaseline" />
-    <xs:attribute ref="android:layout_alignLeft" />
-    <xs:attribute ref="android:layout_alignTop" />
-    <xs:attribute ref="android:layout_alignRight" />
-    <xs:attribute ref="android:layout_alignBottom" />
-    <xs:attribute ref="android:layout_alignParentLeft" />
-    <xs:attribute ref="android:layout_alignParentTop" />
-    <xs:attribute ref="android:layout_alignParentRight" />
-    <xs:attribute ref="android:layout_alignParentBottom" />
-    <xs:attribute ref="android:layout_centerInParent" />
-    <xs:attribute ref="android:layout_centerHorizontal" />
-    <xs:attribute ref="android:layout_centerVertical" />
-    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
-    <xs:attribute ref="android:layout_toStartOf" />
-    <xs:attribute ref="android:layout_toEndOf" />
-    <xs:attribute ref="android:layout_alignStart" />
-    <xs:attribute ref="android:layout_alignEnd" />
-    <xs:attribute ref="android:layout_alignParentStart" />
-    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
+    <xs:attribute ref="android:layout_weight" />
+    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1536,26 +1492,6 @@
   <xs:complexType name="android.support.v4.app.FragmentTabHost">
     <xs:complexContent mixed="false">
       <xs:extension base="TabHost" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="TravelingApp.SlidingTabScrollView" type="TravelingApp.SlidingTabScrollView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: TravelingApp.SlidingTabScrollView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="TravelingApp.SlidingTabScrollView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="HorizontalScrollView" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="TravelingApp.SlidingTabStrip" type="TravelingApp.SlidingTabStrip">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: TravelingApp.SlidingTabStrip</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="TravelingApp.SlidingTabStrip">
-    <xs:complexContent mixed="false">
-      <xs:extension base="LinearLayout" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>

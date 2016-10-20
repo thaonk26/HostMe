@@ -44,6 +44,7 @@ namespace TravelingApp
         private EditText mTxtEmail;
         private EditText mTxtPassword;
         private Button mBtnSignIn;
+        private TextView mTxtSysLog;
 
         public event EventHandler<OnSignInEventArgs> mOnSignInComplete;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -54,6 +55,7 @@ namespace TravelingApp
             mTxtEmail = view.FindViewById<EditText>(Resource.Id.txtEmail);
             mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword);
             mBtnSignIn = view.FindViewById<Button>(Resource.Id.btnDialogSignIn);
+            mTxtSysLog = view.FindViewById<TextView>(Resource.Id.txtSysLog);
 
             mBtnSignIn.Click += MBtnSignIn_Click;
 
@@ -63,31 +65,44 @@ namespace TravelingApp
         private void MBtnSignIn_Click(object sender, EventArgs e)
         {
             //user has clicked signin
+            int UserId = 0;
+            string Message = "";
+
             mOnSignInComplete.Invoke(this, new OnSignInEventArgs(mTxtEmail.Text, mTxtPassword.Text));
-            MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=reflex;User Id=flex;Password=asd123;charset=utf8");
+            MySqlConnection connection = new MySqlConnection("Server=db4free.net;Port=3306;database=reflex;User Id=flex;Password=asd123;charset=utf8");
             try
             {
-
-                if (con.State == ConnectionState.Closed)
+                MySqlDataReader reader;
+                if (connection.State == ConnectionState.Closed)
                 {
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO UserInfo( Email, Password) VALUES(@Email, @Password)", con);
-                    if(cmd.Parameters.Contains(mTxtEmail.Text) && cmd.Parameters.Contains(mTxtPassword.Text))
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM UserInfo WHERE Email = @Email AND Password = @Password", connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
+                    cmd.Parameters.AddWithValue("@Email", mTxtEmail.Text);
+                    cmd.Parameters.AddWithValue("@Password", mTxtPassword.Text);
+                    connection.Open();
+
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-
+                        UserId = reader.GetInt32(0);
                     }
-
+                    if(UserId == 0)
+                    {
+                        Message = "Email or Password is incorrect";
+                    }
+                    reader.Close();
+                    connection.Close();
                 }
 
             }
-            catch
+            catch(Exception exe)
             {
-
+                Message = exe.Message;
             }
             finally
             {
-                con.Close();
+                connection.Close();
             }
             this.Dismiss();
         }

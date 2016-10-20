@@ -73,12 +73,9 @@
     <Compile Include="dialog_SignUp.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="ProfileActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScrollPage.cs" />
-    <Compile Include="SlidingTabScrollView.cs" />
-    <Compile Include="SlidingTabsFragment.cs" />
-    <Compile Include="SlidingTabStrip.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
@@ -90,14 +87,10 @@
     <AndroidResource Include="Resources\layout\dialog_sign_up.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\fragment_sample.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\pager_item.axml" />
-    <AndroidResource Include="Resources\layout\ScrollMain.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\dialog_sign_in.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProfilePage.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
