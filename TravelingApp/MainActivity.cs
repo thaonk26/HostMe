@@ -18,6 +18,7 @@ namespace TravelingApp
     public class MainActivity : Activity
     {
         private Button mBtnSignUp;
+        private Button mBtnSignIn;
         private ProgressBar mProgressBar;
         private EditText txtUserName, txtEmail, txtPassword;
 
@@ -28,12 +29,21 @@ namespace TravelingApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            mBtnSignIn = FindViewById<Button>(Resource.Id.btnSignin);
             mBtnSignUp = FindViewById<Button>(Resource.Id.btnSignUp);
             mProgressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
             txtUserName = FindViewById<EditText>(Resource.Id.txtUserName);
             txtEmail = FindViewById<EditText>(Resource.Id.txtEmail);
             txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
 
+            mBtnSignIn.Click += (object sender, EventArgs args) =>
+            {
+                FragmentTransaction transaction = FragmentManager.BeginTransaction(); //This pulls up the dialog
+                dialog_SignIn signInDialog = new dialog_SignIn();
+                signInDialog.Show(transaction, "dialog fragment");
+
+                signInDialog.mOnSignInComplete += SignInDialog_mOnSignInComplete;
+            };
             mBtnSignUp.Click += (object sender, EventArgs args) =>
             {
                 //Pull up dialog
@@ -45,7 +55,14 @@ namespace TravelingApp
             };
            
         }
-       
+
+        private void SignInDialog_mOnSignInComplete(object sender, OnSignUpEventArgs e)
+        {
+            mProgressBar.Visibility = ViewStates.Visible;
+            Thread thread = new Thread(ActLikeARequest);
+            thread.Start();
+        }
+
         void signUpDialog_mOnSignUpComplete(object sender, OnSignUpEventArgs e)
         {
 

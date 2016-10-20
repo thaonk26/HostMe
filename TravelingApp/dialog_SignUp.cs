@@ -44,6 +44,7 @@ namespace TravelingApp
             Email = email;
             Password = password;
         }
+
     }
 
     class dialog_SignUp : DialogFragment
