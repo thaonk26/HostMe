@@ -11,6 +11,8 @@ public class ProfileActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onSaveInstanceState:(Landroid/os/Bundle;)V:GetOnSaveInstanceState_Landroid_os_Bundle_Handler\n" +
+			"n_onPostCreate:(Landroid/os/Bundle;)V:GetOnPostCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"";
 		mono.android.Runtime.register ("TravelingApp.ProfileActivity, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ProfileActivity.class, __md_methods);
@@ -31,6 +33,22 @@ public class ProfileActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onSaveInstanceState (android.os.Bundle p0)
+	{
+		n_onSaveInstanceState (p0);
+	}
+
+	private native void n_onSaveInstanceState (android.os.Bundle p0);
+
+
+	public void onPostCreate (android.os.Bundle p0)
+	{
+		n_onPostCreate (p0);
+	}
+
+	private native void n_onPostCreate (android.os.Bundle p0);
 
 
 	public boolean onOptionsItemSelected (android.view.MenuItem p0)

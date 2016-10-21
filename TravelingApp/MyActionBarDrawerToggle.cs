@@ -31,11 +31,13 @@ namespace TravelingApp
         public override void OnDrawerOpened(View drawerView)
         {
             base.OnDrawerOpened(drawerView);
+            mHostActivity.SupportActionBar.SetTitle(mOpenedResource);
         }
 
         public override void OnDrawerClosed(View drawerView)
         {
             base.OnDrawerClosed(drawerView);
+            mHostActivity.SupportActionBar.SetTitle(mClosedResource);
         }
 
         public override void OnDrawerSlide(View drawerView, float slideOffset)

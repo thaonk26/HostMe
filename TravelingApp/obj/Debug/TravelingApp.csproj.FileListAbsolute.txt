@@ -78,8 +78,12 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\values\toolbarstyles.xml
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\menu\navmenu.xml
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\homeicon.png
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Android.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Data.Tds.dll.mdb
@@ -112,5 +116,9 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\layout\headerdrawerlayout.xml
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\cm_logo.png
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\search.png
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\snow.gif
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb

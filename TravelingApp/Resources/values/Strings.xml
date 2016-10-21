@@ -2,8 +2,9 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">TravelingApp</string>
-    <string name="openDrawer">Drawer Open</string>
-    <string name="closeDrawer">Drawer Close</string>
+    <string name="BottomLine">Welcome</string>
+    <string name="openDrawer">NavBar</string>
+    <string name="closeDrawer">Profile</string>
 
 
 </resources>

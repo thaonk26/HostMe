@@ -12,6 +12,7 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Widget;
 using Android.Support.V7.App;
 using Android.Support.V4.Widget;
+using Android.Support.Design.Widget;
 
 namespace TravelingApp
 {
@@ -25,6 +26,9 @@ namespace TravelingApp
         private MyActionBarDrawerToggle mDrawerToggle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
+        private NavigationView mNavView;
+        private AdapterView mHomeItem;
+
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -34,11 +38,12 @@ namespace TravelingApp
 
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            //mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+
 
             SetSupportActionBar(mToolbar);
 
-            //mBtnSavedItems = FindViewById<Button>(Resource.Id.btnSavedItems);
+            mBtnSavedItems = FindViewById<Button>(Resource.Id.btnSavedItems);
             mBtnChangePassword = FindViewById<Button>(Resource.Id.btnChangePassword);
 
             mBtnChangePassword.Click += (object sender, EventArgs args) =>
@@ -62,6 +67,61 @@ namespace TravelingApp
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);
             mDrawerToggle.SyncState();
+
+            mNavView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            mHomeItem = FindViewById<AdapterView>(Resource.Id.nav_home);
+            mNavView.NavigationItemSelected += MNavView_NavigationItemSelected;
+
+            if(bundle != null)
+            {
+                if(bundle.GetString("DrawerState") == "Opened")
+                {
+                    SupportActionBar.SetTitle(Resource.String.openDrawer);
+                }
+                else
+                {
+                    SupportActionBar.SetTitle(Resource.String.closeDrawer);
+                }
+            }
+            else
+            {
+                //first time activity is ran
+                SupportActionBar.SetTitle(Resource.String.closeDrawer);
+            }
+        }
+
+        private void MNavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+        {
+            switch (e.MenuItem.ItemId)
+            {
+                case (Resource.Id.nav_home):
+                    Toast.MakeText(this, "Home Selected!", ToastLength.Short).Show();
+                    Intent intent = new Intent(this, typeof(ProfileActivity));
+                    StartActivity(intent);
+                    break;
+                case (Resource.Id.nav_search):
+                    Toast.MakeText(this, "Search!", ToastLength.Short).Show();
+                    break;
+                    
+            }
+        }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            if (mDrawerLayout.IsDrawerOpen((int)GravityFlags.Left))
+            {
+                outState.PutString("DrawerState", "Opened");
+            }
+            else
+            {
+                outState.PutString("DrawerState", "Closed");
+            }
+            base.OnSaveInstanceState(outState);
+        }
+        protected override void OnPostCreate(Bundle savedInstanceState)
+        {
+            base.OnPostCreate(savedInstanceState);
+            mDrawerToggle.SyncState();
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -69,5 +129,6 @@ namespace TravelingApp
             mDrawerToggle.OnOptionsItemSelected(item);  //allows to be opened or closed
             return base.OnOptionsItemSelected(item);
         }
+
     }
 }
