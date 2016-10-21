@@ -12,7 +12,12 @@ using Android.Widget;
 
 namespace TravelingApp
 {
-    class SlidingTabScrollView
+    public class SlidingTabScrollView
     {
+        public interface TabColorizer
+        {
+            int GetIndicatorColor(int position);
+            int GetDividerColor(int position);
+        }
     }
 }

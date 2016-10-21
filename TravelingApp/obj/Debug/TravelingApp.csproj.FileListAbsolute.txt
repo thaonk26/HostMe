@@ -121,4 +121,3 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\draw
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\search.png
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\snow.gif
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll.mdb
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
