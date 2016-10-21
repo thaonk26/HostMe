@@ -85,6 +85,6 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\bin\Microsoft.Owin.Secu
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\bin\System.Web.Http.Owin.xml
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\obj\Debug\HostAPI.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\obj\Debug\HostAPI.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\obj\Debug\HostAPI.pdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\HostAPI\obj\Debug\HostAPI.csprojResolveAssemblyReference.cache

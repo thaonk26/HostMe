@@ -1,1 +1,1 @@
-<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">TravelingApp</string><string name="firstSpinner">Choose Currency</string><string-array name="firstCurrency"><item>US</item><item>Baht</item><item>Yen</item></string-array></resources>
+<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">TravelingApp</string><string name="openDrawer">Drawer Open</string><string name="closeDrawer">Drawer Close</string></resources>

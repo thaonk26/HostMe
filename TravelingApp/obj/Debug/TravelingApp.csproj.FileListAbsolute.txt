@@ -50,7 +50,6 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\SQLitePC
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.v13.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.v4.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\SQLite-net.dll.mdb
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.pdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\bin\TravelingApp.TravelingApp.apk
@@ -75,7 +74,12 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\draw
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\xs.png
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\R.cs.flag
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\uploadflags.txt
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\values\toolbarstyles.xml
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Android.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Data.Tds.dll.mdb

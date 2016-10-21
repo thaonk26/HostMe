@@ -11,7 +11,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="ProfileActivity" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.ProfileActivity" />
+    <activity android:label="ProfileActivity" android:theme="@style/MyTheme" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.ProfileActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="TravelingApp.TravelingApp.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
