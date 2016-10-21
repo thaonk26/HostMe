@@ -51,9 +51,9 @@ namespace TravelingApp
                 {
 
                     connection.Open();
-                    MySqlCommand cmdSelect = new MySqlCommand("SELECT * FROM UserInfo WHERE Password = @Password", connection);
-                    cmdSelect.Parameters.AddWithValue("@Password", mCurrentPassword.Text);
-                    if (mNewPassword.Text == mConfirmNewPassword.Text && cmdSelect.Parameters.Contains(mCurrentPassword.Text))
+                    //MySqlCommand cmdSelect = new MySqlCommand("SELECT * FROM UserInfo WHERE Password = @Password", connection);
+                    //cmdSelect.Parameters.AddWithValue("@Password", mCurrentPassword.Text);
+                    if (mNewPassword.Text == mConfirmNewPassword.Text)
                     {
                         MySqlCommand cmd = new MySqlCommand("UPDATE UserInfo SET Password=@NewPass WHERE UserName=@UserName", connection);
                         cmd.Parameters.AddWithValue("@NewPass", mNewPassword.Text);
