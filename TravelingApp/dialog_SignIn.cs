@@ -58,7 +58,7 @@ namespace TravelingApp
             mTxtSysLog = view.FindViewById<TextView>(Resource.Id.txtSysLog);
 
             mBtnSignIn.Click += MBtnSignIn_Click;
-
+            
             return view;
         }
 

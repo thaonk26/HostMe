@@ -90,6 +90,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\draw
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\snow.gif
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\R.cs.flag
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\uploadflags.txt
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Android.dll.mdb
@@ -99,6 +100,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.C
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Core.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Data.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Json.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Net.Http.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Numerics.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Runtime.Serialization.dll.mdb
@@ -115,6 +117,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Core.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Data.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Json.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Net.Http.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Numerics.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
