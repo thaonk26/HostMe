@@ -36,11 +36,10 @@ namespace TravelingApp
 
             public SamplePagerAdapter() : base()
             {
-                items.Add("This");
-                items.Add("Is");
-                items.Add("Where");
-                items.Add("Tabs");
-                items.Add("Go");
+                items.Clear();
+                items.Add("Search Host");
+                items.Add("Search Airlines");
+                items.Add("Search Trains");
             }
             public override int Count
             {
@@ -56,11 +55,32 @@ namespace TravelingApp
             public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
             {
                 View view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
-                container.AddView(view);
-
-                TextView textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
+                TextView textTitle;
                 int pos = position + 1;
-                textTitle.Text = "This is a teset";
+
+                if(pos == 1)
+                {
+                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
+                    container.AddView(view);
+                    textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
+                    textTitle.Text = "This is a teset";
+                    TextView textSubtitle = view.FindViewById<TextView>(Resource.Id.item_subtitle);
+                    textSubtitle.Text = "Are you sure?";
+                }
+                else if(pos == 2)
+                {
+                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
+                    container.AddView(view);
+                    textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
+                    textTitle.Text = "Position 2";
+                }
+                else if(pos == 3)
+                {
+                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
+                    container.AddView(view);
+                    textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
+                    textTitle.Text = "Position 3";
+                }
                 return view;
             }
             public string GetHeaderTitle(int position)

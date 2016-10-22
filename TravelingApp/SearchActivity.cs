@@ -15,7 +15,7 @@ using Android.Support.Design.Widget;
 
 namespace TravelingApp
 {
-    [Activity(Label = "SearchActivity")]
+    [Activity(Label = "SearchActivity", Theme = "@style/MyTheme")]
     public class SearchActivity : AppCompatActivity
     {
         private SupportToolbar mToolbar;
@@ -30,8 +30,8 @@ namespace TravelingApp
 
             SetContentView(Resource.Layout.SearchPage);
 
-            mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
-            mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar_search);
+            mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout_search);
 
             SetSupportActionBar(mToolbar);
 
@@ -52,7 +52,7 @@ namespace TravelingApp
             SupportActionBar.SetDisplayShowTitleEnabled(true);
             mDrawerToggle.SyncState();
 
-            mNavView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            mNavView = FindViewById<NavigationView>(Resource.Id.nav_view_search);
             mHomeItem = FindViewById<AdapterView>(Resource.Id.nav_home);
             mNavView.NavigationItemSelected += MNavView_NavigationItemSelected;
 

@@ -2289,6 +2289,7 @@ containing a value of this type.
         public static int btnDialogEmail=0x7f06007a;
         public static int btnDialogSignIn=0x7f060078;
         public static int btnSavedItems=0x7f060096;
+        public static int btnSearchHost=0x7f06009c;
         public static int btnSignUp=0x7f060081;
         public static int btnSignin=0x7f06007f;
         public static int buttonPanel=0x7f060044;
@@ -2314,6 +2315,8 @@ containing a value of this type.
         public static int design_navigation_view=0x7f06006e;
         public static int disableHome=0x7f06000e;
         public static int drawer_layout=0x7f060094;
+        public static int drawer_layout_host=0x7f060099;
+        public static int drawer_layout_search=0x7f0600a0;
         public static int edit_query=0x7f06005c;
         public static int end=0x7f06001b;
         public static int end_padder=0x7f060090;
@@ -2342,13 +2345,15 @@ containing a value of this type.
         public static int listMode=0x7f06000b;
         public static int list_item=0x7f060041;
         public static int media_actions=0x7f060087;
-        public static int menu=0x7f06009a;
+        public static int menu=0x7f0600a3;
         public static int middle=0x7f06001c;
         public static int mini=0x7f060037;
         public static int multiply=0x7f060015;
-        public static int nav_home=0x7f06009b;
-        public static int nav_search=0x7f06009c;
+        public static int nav_home=0x7f0600a4;
+        public static int nav_search=0x7f0600a5;
         public static int nav_view=0x7f060097;
+        public static int nav_view_host=0x7f06009d;
+        public static int nav_view_search=0x7f0600a2;
         public static int navigation_header_container=0x7f06006d;
         public static int never=0x7f060020;
         public static int none=0x7f060010;
@@ -2372,9 +2377,9 @@ containing a value of this type.
         public static int search_button=0x7f06005f;
         public static int search_close_btn=0x7f060064;
         public static int search_edit_frame=0x7f060060;
-        public static int search_fragment=0x7f060099;
+        public static int search_fragment=0x7f0600a1;
         public static int search_go_btn=0x7f060066;
-        public static int search_layout=0x7f060098;
+        public static int search_layout=0x7f06009e;
         public static int search_mag_icon=0x7f060061;
         public static int search_plate=0x7f060062;
         public static int search_src_text=0x7f060063;
@@ -2404,6 +2409,8 @@ containing a value of this type.
         public static int title=0x7f060043;
         public static int title_template=0x7f060048;
         public static int toolbar=0x7f060093;
+        public static int toolbar_host=0x7f060098;
+        public static int toolbar_search=0x7f06009f;
         public static int top=0x7f060032;
         public static int topPanel=0x7f060047;
         public static int touch_outside=0x7f060069;
@@ -2414,6 +2421,8 @@ containing a value of this type.
         public static int txtNewPassword=0x7f060073;
         public static int txtOr=0x7f060080;
         public static int txtPassword=0x7f060077;
+        public static int txtSearchHost=0x7f06009a;
+        public static int txtSearchHost2=0x7f06009b;
         public static int txtSysLog=0x7f060082;
         public static int txtUserName=0x7f060079;
         public static int up=0x7f060009;
@@ -2486,11 +2495,12 @@ containing a value of this type.
         public static int notification_template_part_time=0x7f030032;
         public static int pager_item=0x7f030033;
         public static int profilepage=0x7f030034;
-        public static int searchpage=0x7f030035;
-        public static int select_dialog_item_material=0x7f030036;
-        public static int select_dialog_multichoice_material=0x7f030037;
-        public static int select_dialog_singlechoice_material=0x7f030038;
-        public static int support_simple_spinner_dropdown_item=0x7f030039;
+        public static int searchhostpage=0x7f030035;
+        public static int searchpage=0x7f030036;
+        public static int select_dialog_item_material=0x7f030037;
+        public static int select_dialog_multichoice_material=0x7f030038;
+        public static int select_dialog_singlechoice_material=0x7f030039;
+        public static int support_simple_spinner_dropdown_item=0x7f03003a;
     }
     public static final class menu {
         public static int actionbar_main=0x7f0c0000;

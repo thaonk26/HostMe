@@ -37,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnSavedItems" />
         </LinearLayout>
-        <!-- The Left Navigation Drawer -->
-            <!--<ListView
+    <!-- The Left Navigation Drawer -->
+    <!--<ListView
                 android:id="@+id/left_drawer"
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
@@ -47,12 +47,12 @@
                 android:divider="#818181"
                 android:dividerHeight="1dp"
                 android:background="#E3F2FD" />-->
-      <android.support.design.widget.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:id="@+id/nav_view"
-        app:menu="@menu/navmenu"
-        app:headerLayout="@layout/headerdrawerlayout"/>
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/nav_view"
+            app:menu="@menu/navmenu"
+            app:headerLayout="@layout/headerdrawerlayout" />
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

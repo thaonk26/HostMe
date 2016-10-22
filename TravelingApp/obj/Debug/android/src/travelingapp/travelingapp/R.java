@@ -2289,6 +2289,7 @@ containing a value of this type.
         public static final int btnDialogEmail=0x7f06007a;
         public static final int btnDialogSignIn=0x7f060078;
         public static final int btnSavedItems=0x7f060096;
+        public static final int btnSearchHost=0x7f06009c;
         public static final int btnSignUp=0x7f060081;
         public static final int btnSignin=0x7f06007f;
         public static final int buttonPanel=0x7f060044;
@@ -2314,6 +2315,8 @@ containing a value of this type.
         public static final int design_navigation_view=0x7f06006e;
         public static final int disableHome=0x7f06000e;
         public static final int drawer_layout=0x7f060094;
+        public static final int drawer_layout_host=0x7f060099;
+        public static final int drawer_layout_search=0x7f0600a0;
         public static final int edit_query=0x7f06005c;
         public static final int end=0x7f06001b;
         public static final int end_padder=0x7f060090;
@@ -2342,13 +2345,15 @@ containing a value of this type.
         public static final int listMode=0x7f06000b;
         public static final int list_item=0x7f060041;
         public static final int media_actions=0x7f060087;
-        public static final int menu=0x7f06009a;
+        public static final int menu=0x7f0600a3;
         public static final int middle=0x7f06001c;
         public static final int mini=0x7f060037;
         public static final int multiply=0x7f060015;
-        public static final int nav_home=0x7f06009b;
-        public static final int nav_search=0x7f06009c;
+        public static final int nav_home=0x7f0600a4;
+        public static final int nav_search=0x7f0600a5;
         public static final int nav_view=0x7f060097;
+        public static final int nav_view_host=0x7f06009d;
+        public static final int nav_view_search=0x7f0600a2;
         public static final int navigation_header_container=0x7f06006d;
         public static final int never=0x7f060020;
         public static final int none=0x7f060010;
@@ -2372,9 +2377,9 @@ containing a value of this type.
         public static final int search_button=0x7f06005f;
         public static final int search_close_btn=0x7f060064;
         public static final int search_edit_frame=0x7f060060;
-        public static final int search_fragment=0x7f060099;
+        public static final int search_fragment=0x7f0600a1;
         public static final int search_go_btn=0x7f060066;
-        public static final int search_layout=0x7f060098;
+        public static final int search_layout=0x7f06009e;
         public static final int search_mag_icon=0x7f060061;
         public static final int search_plate=0x7f060062;
         public static final int search_src_text=0x7f060063;
@@ -2404,6 +2409,8 @@ containing a value of this type.
         public static final int title=0x7f060043;
         public static final int title_template=0x7f060048;
         public static final int toolbar=0x7f060093;
+        public static final int toolbar_host=0x7f060098;
+        public static final int toolbar_search=0x7f06009f;
         public static final int top=0x7f060032;
         public static final int topPanel=0x7f060047;
         public static final int touch_outside=0x7f060069;
@@ -2414,6 +2421,8 @@ containing a value of this type.
         public static final int txtNewPassword=0x7f060073;
         public static final int txtOr=0x7f060080;
         public static final int txtPassword=0x7f060077;
+        public static final int txtSearchHost=0x7f06009a;
+        public static final int txtSearchHost2=0x7f06009b;
         public static final int txtSysLog=0x7f060082;
         public static final int txtUserName=0x7f060079;
         public static final int up=0x7f060009;
@@ -2486,11 +2495,12 @@ containing a value of this type.
         public static final int notification_template_part_time=0x7f030032;
         public static final int pager_item=0x7f030033;
         public static final int profilepage=0x7f030034;
-        public static final int searchpage=0x7f030035;
-        public static final int select_dialog_item_material=0x7f030036;
-        public static final int select_dialog_multichoice_material=0x7f030037;
-        public static final int select_dialog_singlechoice_material=0x7f030038;
-        public static final int support_simple_spinner_dropdown_item=0x7f030039;
+        public static final int searchhostpage=0x7f030035;
+        public static final int searchpage=0x7f030036;
+        public static final int select_dialog_item_material=0x7f030037;
+        public static final int select_dialog_multichoice_material=0x7f030038;
+        public static final int select_dialog_singlechoice_material=0x7f030039;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003a;
     }
     public static final class menu {
         public static final int actionbar_main=0x7f0c0000;
