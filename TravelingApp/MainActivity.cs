@@ -40,7 +40,7 @@ namespace TravelingApp
                 FragmentTransaction transaction = FragmentManager.BeginTransaction(); //This pulls up the dialog
                 dialog_SignIn signInDialog = new dialog_SignIn();
                 signInDialog.Show(transaction, "dialog fragment");
-
+                transaction.Commit();
                 signInDialog.mOnSignInComplete += SignInDialog_mOnSignInComplete;
             };
             mBtnSignUp.Click += (object sender, EventArgs args) =>
@@ -49,7 +49,7 @@ namespace TravelingApp
                 FragmentTransaction transaction = FragmentManager.BeginTransaction(); //This pulls up the dialog
                 dialog_SignUp signUpDialog = new dialog_SignUp();
                 signUpDialog.Show(transaction, "dialog fragment");
-
+                transaction.Commit();
                 signUpDialog.mOnSignUpComplete += signUpDialog_mOnSignUpComplete;
 
             };

@@ -1909,8 +1909,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060078
 			public const int btnDialogSignIn = 2131099768;
 			
-			// aapt resource value: 0x7f060094
-			public const int btnSavedItems = 2131099796;
+			// aapt resource value: 0x7f060096
+			public const int btnSavedItems = 2131099798;
 			
 			// aapt resource value: 0x7f060081
 			public const int btnSignUp = 2131099777;
@@ -1984,8 +1984,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06000e
 			public const int disableHome = 2131099662;
 			
-			// aapt resource value: 0x7f060092
-			public const int drawer_layout = 2131099794;
+			// aapt resource value: 0x7f060094
+			public const int drawer_layout = 2131099796;
 			
 			// aapt resource value: 0x7f06005c
 			public const int edit_query = 2131099740;
@@ -2038,11 +2038,17 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f060093
-			public const int imgProfile = 2131099795;
+			// aapt resource value: 0x7f060095
+			public const int imgProfile = 2131099797;
 			
 			// aapt resource value: 0x7f06008f
 			public const int info = 2131099791;
+			
+			// aapt resource value: 0x7f060091
+			public const int item_subtitle = 2131099793;
+			
+			// aapt resource value: 0x7f060092
+			public const int item_title = 2131099794;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2065,8 +2071,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060087
 			public const int media_actions = 2131099783;
 			
-			// aapt resource value: 0x7f060096
-			public const int menu = 2131099798;
+			// aapt resource value: 0x7f06009a
+			public const int menu = 2131099802;
 			
 			// aapt resource value: 0x7f06001c
 			public const int middle = 2131099676;
@@ -2077,14 +2083,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060015
 			public const int multiply = 2131099669;
 			
+			// aapt resource value: 0x7f06009b
+			public const int nav_home = 2131099803;
+			
+			// aapt resource value: 0x7f06009c
+			public const int nav_search = 2131099804;
+			
 			// aapt resource value: 0x7f060097
-			public const int nav_home = 2131099799;
-			
-			// aapt resource value: 0x7f060098
-			public const int nav_search = 2131099800;
-			
-			// aapt resource value: 0x7f060095
-			public const int nav_view = 2131099797;
+			public const int nav_view = 2131099799;
 			
 			// aapt resource value: 0x7f06006d
 			public const int navigation_header_container = 2131099757;
@@ -2155,8 +2161,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060060
 			public const int search_edit_frame = 2131099744;
 			
+			// aapt resource value: 0x7f060099
+			public const int search_fragment = 2131099801;
+			
 			// aapt resource value: 0x7f060066
 			public const int search_go_btn = 2131099750;
+			
+			// aapt resource value: 0x7f060098
+			public const int search_layout = 2131099800;
 			
 			// aapt resource value: 0x7f060061
 			public const int search_mag_icon = 2131099745;
@@ -2242,8 +2254,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060048
 			public const int title_template = 2131099720;
 			
-			// aapt resource value: 0x7f060091
-			public const int toolbar = 2131099793;
+			// aapt resource value: 0x7f060093
+			public const int toolbar = 2131099795;
 			
 			// aapt resource value: 0x7f060032
 			public const int top = 2131099698;
@@ -2506,16 +2518,19 @@ namespace TravelingApp
 			public const int ProfilePage = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_item_material = 2130903093;
+			public const int SearchPage = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_multichoice_material = 2130903094;
+			public const int select_dialog_item_material = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int select_dialog_singlechoice_material = 2130903095;
+			public const int select_dialog_multichoice_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int support_simple_spinner_dropdown_item = 2130903096;
+			public const int select_dialog_singlechoice_material = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int support_simple_spinner_dropdown_item = 2130903097;
 			
 			static Layout()
 			{

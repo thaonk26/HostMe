@@ -25,7 +25,6 @@ namespace TravelingApp
         private SupportToolbar mToolbar;
         private MyActionBarDrawerToggle mDrawerToggle;
         private DrawerLayout mDrawerLayout;
-        private ListView mLeftDrawer;
         private NavigationView mNavView;
         private AdapterView mHomeItem;
 
@@ -38,7 +37,7 @@ namespace TravelingApp
 
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            //mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+
 
 
             SetSupportActionBar(mToolbar);
@@ -101,6 +100,8 @@ namespace TravelingApp
                     break;
                 case (Resource.Id.nav_search):
                     Toast.MakeText(this, "Search!", ToastLength.Short).Show();
+                    Intent intentSearch = new Intent(this, typeof(SearchActivity));
+                    StartActivity(intentSearch);
                     break;
                     
             }
