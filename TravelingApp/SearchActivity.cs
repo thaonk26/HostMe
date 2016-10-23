@@ -12,6 +12,10 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
+using System.Json;
+using System.Threading.Tasks;
+using System.Net;
+using System.IO;
 
 namespace TravelingApp
 {
@@ -24,6 +28,7 @@ namespace TravelingApp
         private NavigationView mNavView;
         private AdapterView mHomeItem;
 
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -35,22 +40,30 @@ namespace TravelingApp
 
             SetSupportActionBar(mToolbar);
 
+          
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             SlidingTabsFragment fragment = new SlidingTabsFragment();
             transaction.Replace(Resource.Id.search_fragment, fragment);
             transaction.Commit();
+            try
+            {
 
-            mDrawerToggle = new MyActionBarDrawerToggle(
-                this,                           //Host Activity
-                mDrawerLayout,                  //DrawerLayout
-                Resource.String.openDrawer,     //Opened Message
-                Resource.String.closeDrawer     //Closed Message
-                );
-            mDrawerLayout.SetDrawerListener(mDrawerToggle);  //gives drawer toggle permission to call the methods
-            SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowTitleEnabled(true);
-            mDrawerToggle.SyncState();
+                mDrawerToggle = new MyActionBarDrawerToggle(
+                    this,                           //Host Activity
+                    mDrawerLayout,                  //DrawerLayout
+                    Resource.String.openDrawer,     //Opened Message
+                    Resource.String.closeDrawer     //Closed Message
+                    );
+                mDrawerLayout.SetDrawerListener(mDrawerToggle);  //gives drawer toggle permission to call the methods
+                SupportActionBar.SetHomeButtonEnabled(true);
+                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                SupportActionBar.SetDisplayShowTitleEnabled(true);
+                mDrawerToggle.SyncState();
+            }
+            catch
+            {
+
+            }
 
             mNavView = FindViewById<NavigationView>(Resource.Id.nav_view_search);
             mHomeItem = FindViewById<AdapterView>(Resource.Id.nav_home);
@@ -106,8 +119,8 @@ namespace TravelingApp
         }
         protected override void OnPostCreate(Bundle savedInstanceState)
         {
-            base.OnPostCreate(savedInstanceState);
             mDrawerToggle.SyncState();
+            base.OnPostCreate(savedInstanceState);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
