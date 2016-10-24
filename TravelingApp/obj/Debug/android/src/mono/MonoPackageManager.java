@@ -100,6 +100,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "TravelingApp.dll" comes first in this list. */
 		"TravelingApp.dll",
 		"MySql.Data.CF.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
 		"SQLitePCL.raw.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
@@ -119,8 +120,18 @@ class MonoPackageManager_Resources {
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
-		"System.Linq.Expressions.dll",
+		"System.IO.dll",
 		"System.Threading.Tasks.dll",
+		"System.Xml.XDocument.dll",
+		"System.Globalization.dll",
+		"System.Runtime.Serialization.Primitives.dll",
+		"System.Linq.Expressions.dll",
+		"System.Dynamic.Runtime.dll",
+		"System.ObjectModel.dll",
+		"System.Text.RegularExpressions.dll",
+		"System.Xml.ReaderWriter.dll",
+		"System.Text.Encoding.dll",
+		"System.Text.Encoding.Extensions.dll",
 		"System.Resources.ResourceManager.dll",
 	};
 	public static final String[] Dependencies = new String[]{
