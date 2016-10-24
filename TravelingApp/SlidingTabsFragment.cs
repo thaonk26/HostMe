@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net.Http;
 using System.Net;
 using System.Json;
 using Android.App;
@@ -22,6 +23,7 @@ namespace TravelingApp
     {
         private SlidingTabScrollView mSlidingTabScrollView;
         private ViewPager mViewPager;
+
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -65,22 +67,22 @@ namespace TravelingApp
                 int pos = position + 1;
                 view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchHostPage, container, false);
                 EditText country = view.FindViewById<EditText>(Resource.Id.txtEditSearchCountry);
-                    EditText city = view.FindViewById<EditText>(Resource.Id.txtEditSearchCity); 
-                    Button search = view.FindViewById<Button>(Resource.Id.btnSearchHost);
-                    //search.SetOnClickListener();
-                    Console.WriteLine("ahhhh");
-                    search.Click += async (sender, e) =>
-                    {
-                        string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text + "$" + city.Text;
-                        JsonValue json = await FetchHostAsync(url);
+                EditText city = view.FindViewById<EditText>(Resource.Id.txtEditSearchCity);
+                Button search = view.FindViewById<Button>(Resource.Id.btnSearchHost);
 
-                    };
-                    container.AddView(view);
-                if(pos == 1)
+                search.Click += async (sender, e) =>
+                {
+                    string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text + "$" + city.Text;
+                    JsonValue json = await FetchHostAsync(url);
+                    ParseAndDisplay(json);
+                };
+                container.AddView(view);
+
+                if (pos == 1)
                 {
 
                 }
-                else if(pos == 2)
+                if (pos == 2)
                 {
                     view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
                     container.AddView(view);
@@ -116,20 +118,21 @@ namespace TravelingApp
                     }
                 }
             }
-            public void OnClick(View v)
-            {
-                throw new NotImplementedException();
-            }
             private void ParseAndDisplay(JsonValue json)
             {
                 mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
                 mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
                 mtxtWork = view.FindViewById<TextView>(Resource.Id.txtDisplayWork);
 
-                JsonValue hosts = json["Hosts"];
-
-                mtxtCountry.Text = hosts["country"];
-                mtxtCity.Text = hosts["city"];
+                //JsonValue hosts = json["Hosts"];
+                //JsonValue obj = JsonObject.Parse(json);
+                JsonValue hosts = json[0];
+                //var test = JsonValue.Parse(json);
+                //var data = test[0];
+                //JsonValue hosts = JsonValue.Parse(json);
+                JsonObject obj = hosts as JsonObject;
+                mtxtCountry.Text = obj["country"];       //stops working here
+                mtxtCity.Text = obj["city"];
                 mtxtWork.Text = hosts["work"];
 
 

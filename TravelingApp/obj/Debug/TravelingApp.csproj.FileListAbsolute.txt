@@ -177,7 +177,6 @@ C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\android\assets\Sy
 C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\android\assets\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll.mdb
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Android.dll.mdb
@@ -213,5 +212,6 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
