@@ -7,6 +7,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Json.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Net.Http.dll
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Web.Services.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\MySql.Data.CF.dll

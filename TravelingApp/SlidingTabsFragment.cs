@@ -10,6 +10,8 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
+using System.Web.Services;
+using System.Web;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V4.View;
@@ -17,6 +19,7 @@ using Java.Lang;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.IO;
+using Java.Util;
 
 namespace TravelingApp
 {
@@ -28,7 +31,7 @@ namespace TravelingApp
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            
+
             return inflater.Inflate(Resource.Layout.fragmentpage, container, false);
         }
         public override void OnViewCreated(View view, Bundle savedInstanceState)
@@ -66,7 +69,7 @@ namespace TravelingApp
 
                 TextView textTitle;
                 int pos = position + 1;
-                
+
                 view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchHostPage, container, false);
                 EditText country = view.FindViewById<EditText>(Resource.Id.txtEditSearchCountry);
                 EditText city = view.FindViewById<EditText>(Resource.Id.txtEditSearchCity);
@@ -84,13 +87,20 @@ namespace TravelingApp
                 TextView mtxtGender = view.FindViewById<TextView>(Resource.Id.txtDisplayGender);
                 Button search = view.FindViewById<Button>(Resource.Id.btnSearchHost);
 
-                container.AddView(view);
-                search.Click +=  (sender, e) =>
-              {
+                EditText mtxtDepartureDate, mtxtOriginCode, mtxtDestinationCode;
+                TextView mtxtDepartureTime, mtxtArrivalTime, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtArrivalAirportCode, mtxtDepartureTerminal, mtxtArrivalTerminal;
+                Button mbtnSearchAirlines;
 
-                  string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text;
-                  if (city.Text != "") { url += "$" + city.Text; }
-                  if (work.Text != "") { url += "$" + work.Text; }
+
+
+
+                container.AddView(view);
+                search.Click += (sender, e) =>
+             {
+
+                 string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text;
+                 if (city.Text != "") { url += "$" + city.Text; }
+                 if (work.Text != "") { url += "$" + work.Text; }
                   //JsonValue json = await FetchHostAsync(url);
                   //ParseAndDisplay(json, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender);
                   // var taskA = new Task(() =>
@@ -102,18 +112,39 @@ namespace TravelingApp
                   //ParseAndDisplay(obj, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay);
               };
 
+
+
                 if (pos == 1)
                 {
 
                 }
                 if (pos == 2)
                 {
-                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
+                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchAirlinesPage, container, false);
                     container.AddView(view);
-                    textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
-                    textTitle.Text = "Position 2";
+                    mtxtDurationFlight = view.FindViewById<TextView>(Resource.Id.txtDisplayDurationFlight);
+                    mtxtDepartureAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayOriginCode);
+                    mtxtDepartureTime = view.FindViewById<TextView>(Resource.Id.txtDisplayDepartureTime);
+                    mtxtDepartureTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayTerminal);
+                    mtxtArrivalAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayDestinationCode);
+                    mtxtArrivalTime = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTime);
+                    mtxtArrivalTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTerminal);
+
+                    mbtnSearchAirlines = view.FindViewById<Button>(Resource.Id.btnSearchAirline);
+
+                    mtxtOriginCode = view.FindViewById<EditText>(Resource.Id.txtEditSelectOrigin);
+                    mtxtDepartureDate = view.FindViewById<EditText>(Resource.Id.txtEditSelectDepartureDate);
+                    mtxtDestinationCode = view.FindViewById<EditText>(Resource.Id.txtEditSelectArrival);
+
+                    mbtnSearchAirlines.Click += async (s, e) =>
+                   {
+                       string url = "https://api.lufthansa.com/v1/operations/schedules/" + mtxtOriginCode.Text + "/" + mtxtDestinationCode.Text + "/" + mtxtDepartureDate.Text + "?directFlights=0";
+                       //GetFlight(url, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtTerminal, mtxtArrivalAirportCode, mtxtArrivalTime);
+                       JsonValue json = await FetchAirlineAsync(url);
+                       ParseAndDisplayFlights(json, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtDepartureTerminal, mtxtArrivalAirportCode, mtxtArrivalTime, mtxtArrivalTerminal);
+                   };
                 }
-                else if(pos == 3)
+                else if (pos == 3)
                 {
                     view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
                     container.AddView(view);
@@ -123,25 +154,116 @@ namespace TravelingApp
                 return view;
             }
 
-            //private async Task<JsonValue> FetchHostAsync(string url)
-            //{
-            //    HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
-            //    request.ContentType = "application/json";
-            //    request.Method = "GET";
-            //    using (WebResponse response = await request.GetResponseAsync())
-            //    {
-            //        // Get a stream representation of the HTTP web response:
-            //        using (Stream stream = response.GetResponseStream())
-            //        {
-            //            // Use this stream to build a JSON document object:
-            //            JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-            //            Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+            private void ParseAndDisplayFlights(JsonValue json, TextView mDurationFlight, TextView mDepartureAirportCode, TextView mDepartureTime, TextView mDepartureTerminal, TextView mArrivalAirportCode, TextView mArrivalTime, TextView mArrivalTerminal)
+            {
+                JsonValue scheduleResource = json["ScheduleResource"];
+                JsonValue schedule = scheduleResource["Schedule"];
+                JsonValue totalyJourney = schedule[0]["TotalJourney"];
 
-            //            // Return the JSON document:
-            //            return jsonDoc;
+                mDurationFlight.Text = totalyJourney["Duration"];
+
+                JsonValue flight = schedule[0]["Flight"];
+                JsonValue departure, arrival;
+                try
+                {
+                    departure = flight[0]["Departure"];
+                    JsonValue dAirportCode = departure["AirportCode"];
+                    JsonValue dDateTime = departure["ScheduledTimeLocal"]["DateTime"];
+                    mDepartureAirportCode.Text = dAirportCode;
+                    mDepartureTime.Text = dDateTime;
+                }
+                catch
+                {
+                    departure = flight["Departure"];
+                    JsonValue dAirportCode = departure["AirportCode"];
+                    JsonValue dDateTime = departure["ScheduledTimeLocal"]["DateTime"];
+                    mDepartureAirportCode.Text = dAirportCode;
+                    mDepartureTime.Text = dDateTime;
+                }
+                try
+                {
+                    arrival = flight[0]["Arrival"];
+                    JsonValue aAirportCode = arrival["AirportCode"];
+                    JsonValue aDateTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                    mArrivalAirportCode.Text = aAirportCode;
+                    mArrivalTime.Text = aDateTime;
+                }
+                catch
+                {
+                    arrival = flight["Arrival"];
+                    JsonValue aAirportCode = arrival["AirportCode"];
+                    JsonValue aDateTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                    mArrivalAirportCode.Text = aAirportCode;
+                    mArrivalTime.Text = aDateTime;
+                }
+                try
+                {
+                    JsonValue dTerminal = departure["Terminal"];
+                    mDepartureTerminal.Text = dTerminal;
+                } catch { mDepartureTerminal.Text = "None"; }
+                try
+                {
+                    JsonValue aTerminal = arrival["Terminal"];
+                    mDepartureTerminal.Text = aTerminal;
+                }
+                catch { mArrivalTerminal.Text = "None"; }
+
+
+                //mDurationFlight.Text = json[0].ScheduleResource.Schedule.Flight.Departure.AirportCode.ToString();
+                //mDepartureAirportCode.Text = json[0].ScheduleResource.Schedule.Flight.Departure.AirportCode;
+                //mDepartureTime.Text = json[0].ScheduleResource.Schedule.Flight.Departure.ScheduledTimeLocal.ToString();
+                //mTerminal.Text = json[0].ScheduleResource.Schedule.Flight.Departure.Terminal.Name.ToString();
+                //mArrivalAirportCode.Text = json[0].ScheduleResource.Schedule.Flight.Arrival.AirportCode;
+                //mArrivalTime.Text = json[0].ScheduleResource.Schedule.Flight.Arrival.ScheduledTimeLocal.ToString();
+
+            }
+
+            //private async void GetFlight(string url, TextView mDurationFlight, TextView mDepartureAirportCode, TextView mDepartureTime, TextView mTerminal, TextView mArrivalAirportCode, TextView mArrivalTime)
+            //{
+            //    List<RootObject2> rootResult = new List<RootObject2>();
+            //    object flight = "";
+            //    using (var client = new HttpClient())
+            //    {
+            //        client.DefaultRequestHeaders.Add("authorization", "Bearer z2g9h5966bwa6tygngncr5s6");
+            //        client.DefaultRequestHeaders.Add("accept", "application/json");
+            //        HttpResponseMessage response = await client.GetAsync(url);
+            //        if (response.IsSuccessStatusCode)
+            //        {
+            //            string result = await response.Content.ReadAsStringAsync();
+            //            var test = JsonConvert.DeserializeObject(result);                                                       //WORKS AND IS AN OBJ
+            //            flight = JsonConvert.DeserializeObject(result);
+                        
+            //            //RootObject2 sch = JsonConvert.DeserializeObject<RootObject2>(result);                                         //DOESNT WORK
+            //            //var mList = JsonConvert.DeserializeObject<IDictionary<string, RootObject2>>(result);                  //CANT FIND CHILDREN
+            //            //foreach (Schedule s in mList) { string txt = s.Flight.Departure.AirportCode; }
+            //            //rootResult = (List<RootObject2>)JsonConvert.DeserializeObject(result, typeof(List<RootObject2>));      //DOESNT WORK
             //        }
+            //        ParseAndDisplayFlights(rootResult, mDurationFlight, mDepartureAirportCode, mDepartureTime, mTerminal, mArrivalAirportCode, mArrivalTime);
+
             //    }
             //}
+
+            private async Task<JsonValue> FetchAirlineAsync(string url)
+            {
+                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
+                request.ContentType = "application/json";
+                request.Method = "GET";
+                request.Headers.Add("authorization", "Bearer z2g9h5966bwa6tygngncr5s6");
+                //request.Headers.Add("accept", "application/json");
+                using (WebResponse response = await request.GetResponseAsync())
+                {
+                    // Get a stream representation of the HTTP web response:
+                    using (Stream stream = response.GetResponseStream())
+                    {
+                        // Use this stream to build a JSON document object:
+                        JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+                        Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+
+                        // Return the JSON document:
+                        return jsonDoc;
+                    }
+                }
+            }
             //private void ParseAndDisplay(JsonValue json, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender)
             //{
             //    JsonValue hosts = json[0];
@@ -178,13 +300,12 @@ namespace TravelingApp
                 //var mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
                 //mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
                 //mtxtWork = view.FindViewById<TextView>(Resource.Id.txtDisplayWork);
-                var dates = json[0].datesAvailable;
                 string temp = "";
                 for (int i = 0; i < json[0].datesAvailable.Count; i++)
                 {
                     temp += Convert.ToString(json[0].datesAvailable[i]);
                 }
-                
+
                 mtxtCountry.Text = json[0].country;
                 mtxtCity.Text = json[0].city;
                 mtxtWork.Text = json[0].work;
@@ -242,5 +363,50 @@ namespace TravelingApp
             public string age { get; set; }
             public List<string> datesAvailable { get; set; }
         }
+        public class TotalJourney
+        {
+            public string Duration { get; set; }
+        }
+
+        public class Schedule
+        {
+            public TotalJourney TotalJourney { get; set; }
+            public Flight Flight { get; set; }
+        }
+        public class Flight
+        {
+            public Departure Departure { get; set; }
+            public Arrival Arrival { get; set; }
+        }
+        public class Departure
+        {
+            public string AirportCode { get; set; }
+            public ScheduledTimeLocal ScheduledTimeLocal { get; set; }
+            public Terminal Terminal { get; set; }
+        }
+        public class Arrival
+        {
+            public string AirportCode { get; set; }
+            public ScheduledTimeLocal ScheduledTimeLocal { get; set; }
+        }
+        public class Terminal
+        {
+            public int Name { get; set; }
+        }
+        public class ScheduledTimeLocal
+        {
+            public string DateTime { get; set; }
+        }
+        public class ScheduleResource
+        {
+            public List<Schedule> ScheduleList { get; set; }
+            public Schedule Schedule { get; set; }
+        }
+
+        public class RootObject2
+        {
+            public ScheduleResource ScheduleResource { get; set; }
+        }
+
     }
 }

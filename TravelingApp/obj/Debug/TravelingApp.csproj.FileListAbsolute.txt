@@ -179,6 +179,8 @@ C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\android\assets\Tr
 C:\Users\Nathaniel\Desktop\TravelingApp\TravelingApp\obj\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\layout\searchairlinespage.xml
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Microsoft.CSharp.dll.mdb
@@ -196,6 +198,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.N
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Runtime.Serialization.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.ServiceModel.Internals.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Transactions.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Web.Services.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Xml.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\Java.Interop.dll.mdb
@@ -215,6 +218,7 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Transactions.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Web.Services.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\android\assets\TravelingApp.dll.mdb
