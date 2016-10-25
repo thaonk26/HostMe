@@ -198,15 +198,15 @@ namespace TravelingApp
                 }
                 try
                 {
-                    JsonValue dTerminal = departure["Terminal"];
+                    JsonValue dTerminal = departure["Terminal"]["Name"];
                     mDepartureTerminal.Text = dTerminal;
-                } catch { mDepartureTerminal.Text = "None"; }
+                } catch { mDepartureTerminal.Text = "To be Announced"; }
                 try
                 {
-                    JsonValue aTerminal = arrival["Terminal"];
-                    mDepartureTerminal.Text = aTerminal;
+                    JsonValue aTerminal = arrival["Terminal"]["Name"];
+                    mArrivalTerminal.Text = aTerminal;
                 }
-                catch { mArrivalTerminal.Text = "None"; }
+                catch { mArrivalTerminal.Text = "To be Announced"; }
 
 
                 //mDurationFlight.Text = json[0].ScheduleResource.Schedule.Flight.Departure.AirportCode.ToString();
