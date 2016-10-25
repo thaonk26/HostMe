@@ -11,6 +11,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="MoneyConvertActivity" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.MoneyConvertActivity" />
     <activity android:label="ProfileActivity" android:theme="@style/MyTheme" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.ProfileActivity" />
     <activity android:label="SearchActivity" android:theme="@style/MyTheme" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.SearchActivity" />
     <activity android:label="SearchHostActivity" android:name="md5f0a9a422d76cd9d879faf99eadcedaa5.SearchHostActivity" />

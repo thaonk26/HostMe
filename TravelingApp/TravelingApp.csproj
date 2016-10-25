@@ -100,6 +100,7 @@
     <Compile Include="dialog_SignIn.cs" />
     <Compile Include="dialog_SignUp.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MoneyConvertActivity.cs" />
     <Compile Include="MyActionBarDrawerToggle.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="ProfileActivity.cs" />
@@ -146,6 +147,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\SearchAirlinesPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MoneyConvertPage.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

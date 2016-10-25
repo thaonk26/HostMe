@@ -92,7 +92,7 @@ namespace TravelingApp
             switch (e.MenuItem.ItemId)
             {
                 case (Resource.Id.nav_home):
-                    Toast.MakeText(this, "Home Selected!", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Profile!", ToastLength.Short).Show();
                     Intent intent = new Intent(this, typeof(ProfileActivity));
                     StartActivity(intent);
                     break;
@@ -100,6 +100,11 @@ namespace TravelingApp
                     Toast.MakeText(this, "Search!", ToastLength.Short).Show();
                     Intent intentSearch = new Intent(this, typeof(SearchActivity));
                     StartActivity(intentSearch);
+                    break;
+                case (Resource.Id.nav_convert):
+                    Toast.MakeText(this, "Convert!", ToastLength.Short).Show();
+                    Intent intentConvert = new Intent(this, typeof(MoneyConvertActivity));
+                    StartActivity(intentConvert);
                     break;
 
             }
