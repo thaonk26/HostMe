@@ -11,6 +11,7 @@
       android:title="Search"/>
     <item
 android:id="@+id/nav_convert"
+android:icon="@drawable/moneyConverter"
 android:title="Money Converter" />
   </group>
 </menu>

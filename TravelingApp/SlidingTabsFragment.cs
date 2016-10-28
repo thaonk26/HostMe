@@ -51,7 +51,6 @@ namespace TravelingApp
                 items.Clear();
                 items.Add("Search Host");
                 items.Add("Search Airlines");
-                items.Add("Search Trains");
             }
             public override int Count
             {
@@ -67,7 +66,7 @@ namespace TravelingApp
             public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
             {
 
-                TextView textTitle;
+
                 int pos = position + 1;
 
                 view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchHostPage, container, false);
@@ -144,13 +143,6 @@ namespace TravelingApp
                        ParseAndDisplayFlights(json, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtDepartureTerminal, mtxtArrivalAirportCode, mtxtArrivalTime, mtxtArrivalTerminal);
                    };
                 }
-                else if (pos == 3)
-                {
-                    view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
-                    container.AddView(view);
-                    textTitle = view.FindViewById<TextView>(Resource.Id.item_title);
-                    textTitle.Text = "Position 3";
-                }
                 return view;
             }
 
@@ -208,14 +200,6 @@ namespace TravelingApp
                 }
                 catch { mArrivalTerminal.Text = "To be Announced"; }
 
-
-                //mDurationFlight.Text = json[0].ScheduleResource.Schedule.Flight.Departure.AirportCode.ToString();
-                //mDepartureAirportCode.Text = json[0].ScheduleResource.Schedule.Flight.Departure.AirportCode;
-                //mDepartureTime.Text = json[0].ScheduleResource.Schedule.Flight.Departure.ScheduledTimeLocal.ToString();
-                //mTerminal.Text = json[0].ScheduleResource.Schedule.Flight.Departure.Terminal.Name.ToString();
-                //mArrivalAirportCode.Text = json[0].ScheduleResource.Schedule.Flight.Arrival.AirportCode;
-                //mArrivalTime.Text = json[0].ScheduleResource.Schedule.Flight.Arrival.ScheduledTimeLocal.ToString();
-
             }
 
             //private async void GetFlight(string url, TextView mDurationFlight, TextView mDepartureAirportCode, TextView mDepartureTime, TextView mTerminal, TextView mArrivalAirportCode, TextView mArrivalTime)
@@ -248,7 +232,7 @@ namespace TravelingApp
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
                 request.ContentType = "application/json";
                 request.Method = "GET";
-                request.Headers.Add("authorization", "Bearer z2g9h5966bwa6tygngncr5s6");
+                request.Headers.Add("authorization", "Bearer 5hqcbz9udqznp4kwe2b5dat4");
                 //request.Headers.Add("accept", "application/json");
                 using (WebResponse response = await request.GetResponseAsync())
                 {
@@ -297,9 +281,6 @@ namespace TravelingApp
             }
             private void ParseAndDisplay(List<RootObject> json, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender)
             {
-                //var mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
-                //mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
-                //mtxtWork = view.FindViewById<TextView>(Resource.Id.txtDisplayWork);
                 string temp = "";
                 for (int i = 0; i < json[0].datesAvailable.Count; i++)
                 {
@@ -316,27 +297,6 @@ namespace TravelingApp
                 mtxtDate.Text = temp;
                 mtxtSpace.Text = json[0].spaceAvailable.ToString();
                 mtxtGender.Text = json[0].gender;
-
-                //mtxtCountry.SetBackgroundResource(Resource.Id.txtDisplayCountry);
-                //mtxtCountry.Append(json[0].country);
-
-                //JsonValue hosts = json["Hosts"];
-                //JsonValue obj = JsonObject.Parse(json);
-                //JsonValue hosts = json[0];
-                //var test = JsonValue.Parse(json);
-                //var data = test[0];
-                //JsonValue hosts = JsonValue.Parse(json);
-                //var objs = JsonObject.Parse(hosts);
-                //JsonObject obj = hosts as JsonObject;
-                //var host = new RootObject();
-                //host.country = json[0].country;
-                //string hosts = json[0].country;
-                //mtxtCountry.Text = hosts;
-                //mtxtCountry.Text = host.country;
-
-                //mtxtCountry.Text = hosts["country"];       //stops working here
-                //mtxtCity.Text = hosts["city"];
-                //mtxtWork.Text = hosts["work"];
 
 
             }

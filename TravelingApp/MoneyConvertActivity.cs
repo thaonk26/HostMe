@@ -35,7 +35,7 @@ namespace TravelingApp
                 double current = Convert.ToDouble(mtxtCurrentMoney.Text);
                 double convert = 6.78 * current;
 
-                mtxtConvertMoney.Text = convert.ToString() + " CNY";
+                mtxtConvertMoney.Text = convert.ToString();
             };
         }
     }

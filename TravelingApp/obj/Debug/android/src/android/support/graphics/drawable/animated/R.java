@@ -2258,11 +2258,12 @@ containing a value of this type.
         public static int homeicon=0x7f02004d;
         public static int ic_action_overflow=0x7f02004e;
         public static int icon=0x7f02004f;
-        public static int notification_template_icon_bg=0x7f020054;
-        public static int progressbarstyle=0x7f020050;
-        public static int search=0x7f020051;
-        public static int snow=0x7f020052;
-        public static int xs=0x7f020053;
+        public static int moneyconverter=0x7f020050;
+        public static int notification_template_icon_bg=0x7f020055;
+        public static int progressbarstyle=0x7f020051;
+        public static int search=0x7f020052;
+        public static int snow=0x7f020053;
+        public static int xs=0x7f020054;
     }
     public static final class id {
         public static int Gender_section=0x7f0600e2;

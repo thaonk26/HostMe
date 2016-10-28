@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelingApp", "TravelingApp\TravelingApp.csproj", "{2E827691-AB37-4804-8DDF-2396590B9852}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe", "TravelingApp\HostMe.csproj", "{2E827691-AB37-4804-8DDF-2396590B9852}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostAPI", "HostAPI\HostAPI.csproj", "{CA927DE0-4089-43C5-B792-81D0D5F575E1}"
 EndProject

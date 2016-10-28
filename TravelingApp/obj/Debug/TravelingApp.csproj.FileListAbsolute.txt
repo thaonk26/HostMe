@@ -181,8 +181,9 @@ C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Newtonso
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\layout\searchairlinespage.xml
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\layout\moneyconvertpage.xml
-C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\res\drawable\moneyconverter.png
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\obj\Debug\TravelingApp.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Microsoft.CSharp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\TravelingApp\TravelingApp\bin\Debug\Mono.Android.dll.mdb

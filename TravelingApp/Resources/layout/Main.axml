@@ -50,7 +50,6 @@
         android:drawableLeft="@drawable/emailicon2"
         android:background="@drawable/buttonsignup" />
     <TextView
-        android:text="System Message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtSysLog" />
