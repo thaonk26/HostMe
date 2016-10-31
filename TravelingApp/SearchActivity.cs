@@ -28,7 +28,6 @@ namespace TravelingApp
         private NavigationView mNavView;
         private AdapterView mHomeItem;
 
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -40,7 +39,8 @@ namespace TravelingApp
 
             SetSupportActionBar(mToolbar);
 
-          
+            
+
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             SlidingTabsFragment fragment = new SlidingTabsFragment();
             transaction.Replace(Resource.Id.search_fragment, fragment);
@@ -85,6 +85,7 @@ namespace TravelingApp
                 //first time activity is ran
                 SupportActionBar.SetTitle(Resource.String.closeDrawer);
             }
+
         }
 
         private void MNavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)

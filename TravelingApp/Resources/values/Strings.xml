@@ -6,5 +6,25 @@
     <string name="openDrawer">NavBar</string>
     <string name="closeDrawer">Profile</string>
 
+  <array name="testing_airport">
+    <item>@array/airport_codes</item>
+  </array>
+  <string-array name="airport_codes">
+
+    <item>Milwaukee General Mitchell International Airport (MKE)</item>
+    <item>Milwaukee Lawrence J. Timmerman Airport (MWC)</item>
+    <item>Madison Dane County Regional Airport (MSN)</item>
+    <item>Chicago OHare International Airport (ORD)</item>
+    <item>Chicago Rockford International Airport (RFD)</item>
+    <item>Chicago Midway International Airport (MDW)</item>
+    <item>Chicago Executive Airport (PWK)</item>
+    <item>Shanghai Hongqiao International Airport (SHA)</item>
+    <item>Shanghai Pudong International Airport (CNI)</item>
+    <item>Shanghai Pudong International Airport (PVG)</item>
+    <item>Sunan Shuofang International Airport (WUX)</item>
+    <item></item>
+    
+    
+  </string-array>
 
 </resources>

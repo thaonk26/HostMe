@@ -28,6 +28,10 @@ public final class R {
         public static int slide_right=0x7f040010;
         public static int slide_up=0x7f040011;
     }
+    public static final class array {
+        public static int airport_codes=0x7f0c0001;
+        public static int testing_airport=0x7f0c0000;
+    }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -2266,7 +2270,7 @@ containing a value of this type.
         public static int xs=0x7f020054;
     }
     public static final class id {
-        public static int Gender_section=0x7f0600e2;
+        public static int Gender_section=0x7f0600e4;
         public static int action0=0x7f060089;
         public static int action_bar=0x7f06005a;
         public static int action_bar_activity_content=0x7f060001;
@@ -2283,8 +2287,8 @@ containing a value of this type.
         public static int action_mode_bar_stub=0x7f060056;
         public static int action_mode_close_button=0x7f06003c;
         public static int activity_chooser_view_content=0x7f06003d;
-        public static int address_section=0x7f0600ce;
-        public static int age_section=0x7f0600d4;
+        public static int address_section=0x7f0600d0;
+        public static int age_section=0x7f0600d6;
         public static int alertTitle=0x7f060049;
         public static int always=0x7f06001d;
         public static int arrival_terminal=0x7f0600ba;
@@ -2297,7 +2301,7 @@ containing a value of this type.
         public static int btnDialogSignIn=0x7f060078;
         public static int btnSavedItems=0x7f06009b;
         public static int btnSearchAirline=0x7f0600a7;
-        public static int btnSearchHost=0x7f0600c7;
+        public static int btnSearchHost=0x7f0600c9;
         public static int btnSignUp=0x7f060081;
         public static int btnSignin=0x7f06007f;
         public static int buttonPanel=0x7f060044;
@@ -2307,16 +2311,16 @@ containing a value of this type.
         public static int center_vertical=0x7f06002d;
         public static int checkbox=0x7f060052;
         public static int chronometer=0x7f060090;
-        public static int city_section=0x7f0600cb;
+        public static int city_section=0x7f0600cd;
         public static int clip_horizontal=0x7f060033;
         public static int clip_vertical=0x7f060034;
         public static int collapseActionView=0x7f06001e;
         public static int contentPanel=0x7f06004a;
         public static int content_fragment=0x7f06007d;
-        public static int country_section=0x7f0600c8;
+        public static int country_section=0x7f0600ca;
         public static int custom=0x7f060050;
         public static int customPanel=0x7f06004f;
-        public static int dates_section=0x7f0600d7;
+        public static int dates_section=0x7f0600d9;
         public static int decor_content_parent=0x7f060058;
         public static int default_activity_button=0x7f060040;
         public static int departure_code=0x7f0600ab;
@@ -2330,9 +2334,9 @@ containing a value of this type.
         public static int destination__code=0x7f0600b4;
         public static int disableHome=0x7f06000e;
         public static int drawer_layout=0x7f060099;
-        public static int drawer_layout_search=0x7f0600e7;
+        public static int drawer_layout_search=0x7f0600e9;
         public static int duration=0x7f0600a8;
-        public static int duration_section=0x7f0600da;
+        public static int duration_section=0x7f0600dc;
         public static int edit_query=0x7f06005c;
         public static int end=0x7f06001b;
         public static int end_padder=0x7f060095;
@@ -2346,7 +2350,7 @@ containing a value of this type.
         public static int fill_vertical=0x7f06002e;
         public static int fixed=0x7f060038;
         public static int getAirlineSection=0x7f0600a6;
-        public static int getHostSection=0x7f0600c6;
+        public static int getHostSection=0x7f0600c8;
         public static int home=0x7f060005;
         public static int homeAsUp=0x7f06000f;
         public static int icon=0x7f060042;
@@ -2357,34 +2361,34 @@ containing a value of this type.
         public static int item_subtitle=0x7f060096;
         public static int item_title=0x7f060097;
         public static int item_touch_helper_previous_elevation=0x7f060000;
-        public static int layout_city=0x7f0600c0;
-        public static int layout_country=0x7f0600bd;
+        public static int layout_city=0x7f0600c2;
+        public static int layout_country=0x7f0600bf;
         public static int layout_departure=0x7f06009d;
         public static int layout_destination=0x7f0600a3;
         public static int layout_origin=0x7f0600a0;
-        public static int layout_work=0x7f0600c3;
+        public static int layout_work=0x7f0600c5;
         public static int left=0x7f06002f;
         public static int line1=0x7f06008e;
         public static int line3=0x7f060092;
         public static int listMode=0x7f06000b;
         public static int list_item=0x7f060041;
         public static int media_actions=0x7f06008c;
-        public static int menu=0x7f0600ea;
+        public static int menu=0x7f0600ec;
         public static int middle=0x7f06001c;
         public static int mini=0x7f060037;
         public static int multiply=0x7f060015;
-        public static int nav_convert=0x7f0600ed;
-        public static int nav_home=0x7f0600eb;
-        public static int nav_search=0x7f0600ec;
+        public static int nav_convert=0x7f0600ef;
+        public static int nav_home=0x7f0600ed;
+        public static int nav_search=0x7f0600ee;
         public static int nav_view=0x7f06009c;
-        public static int nav_view_search=0x7f0600e9;
+        public static int nav_view_search=0x7f0600eb;
         public static int navigation_header_container=0x7f06006d;
         public static int never=0x7f060020;
         public static int none=0x7f060010;
         public static int normal=0x7f06000c;
         public static int parallax=0x7f060028;
         public static int parentPanel=0x7f060046;
-        public static int pay_section=0x7f0600dc;
+        public static int pay_section=0x7f0600de;
         public static int pin=0x7f060029;
         public static int progressBar1=0x7f060083;
         public static int progress_circular=0x7f060006;
@@ -2402,9 +2406,9 @@ containing a value of this type.
         public static int search_button=0x7f06005f;
         public static int search_close_btn=0x7f060064;
         public static int search_edit_frame=0x7f060060;
-        public static int search_fragment=0x7f0600e8;
+        public static int search_fragment=0x7f0600ea;
         public static int search_go_btn=0x7f060066;
-        public static int search_layout=0x7f0600e5;
+        public static int search_layout=0x7f0600e7;
         public static int search_mag_icon=0x7f060061;
         public static int search_plate=0x7f060062;
         public static int search_src_text=0x7f060063;
@@ -2418,7 +2422,7 @@ containing a value of this type.
         public static int snackbar_action=0x7f06006c;
         public static int snackbar_text=0x7f06006b;
         public static int snap=0x7f060027;
-        public static int space_section=0x7f0600df;
+        public static int space_section=0x7f0600e1;
         public static int spacer=0x7f060045;
         public static int split_action_bar=0x7f060008;
         public static int src_atop=0x7f060017;
@@ -2435,7 +2439,7 @@ containing a value of this type.
         public static int title=0x7f060043;
         public static int title_template=0x7f060048;
         public static int toolbar=0x7f060098;
-        public static int toolbar_search=0x7f0600e6;
+        public static int toolbar_search=0x7f0600e8;
         public static int top=0x7f060032;
         public static int topPanel=0x7f060047;
         public static int touch_outside=0x7f060069;
@@ -2444,65 +2448,67 @@ containing a value of this type.
         public static int txtCreateAccount=0x7f06007e;
         public static int txtCurrentMoney=0x7f060084;
         public static int txtCurrentPassword=0x7f060072;
-        public static int txtDisplayAddress=0x7f0600d0;
-        public static int txtDisplayAge=0x7f0600d6;
+        public static int txtDisplayAddress=0x7f0600d2;
+        public static int txtDisplayAge=0x7f0600d8;
         public static int txtDisplayArrivalTerminal=0x7f0600bc;
         public static int txtDisplayArrivalTime=0x7f0600b9;
-        public static int txtDisplayCity=0x7f0600cd;
+        public static int txtDisplayCity=0x7f0600cf;
         public static int txtDisplayConvertMoney=0x7f060087;
-        public static int txtDisplayCountry=0x7f0600ca;
-        public static int txtDisplayDates=0x7f0600d9;
+        public static int txtDisplayCountry=0x7f0600cc;
+        public static int txtDisplayDates=0x7f0600db;
         public static int txtDisplayDepartureTime=0x7f0600b0;
         public static int txtDisplayDestinationCode=0x7f0600b6;
-        public static int txtDisplayDuration=0x7f0600db;
+        public static int txtDisplayDuration=0x7f0600dd;
         public static int txtDisplayDurationFlight=0x7f0600aa;
-        public static int txtDisplayGender=0x7f0600e4;
+        public static int txtDisplayGender=0x7f0600e6;
         public static int txtDisplayOriginCode=0x7f0600ad;
-        public static int txtDisplayPay=0x7f0600de;
-        public static int txtDisplaySpace=0x7f0600e1;
+        public static int txtDisplayPay=0x7f0600e0;
+        public static int txtDisplaySpace=0x7f0600e3;
         public static int txtDisplayTerminal=0x7f0600b3;
-        public static int txtDisplayWork=0x7f0600d3;
+        public static int txtDisplayWork=0x7f0600d5;
         public static int txtEditCurrentMoney=0x7f060085;
-        public static int txtEditSearchCity=0x7f0600c2;
-        public static int txtEditSearchCountry=0x7f0600bf;
-        public static int txtEditSearchWork=0x7f0600c5;
+        public static int txtEditSearchCity=0x7f0600c4;
+        public static int txtEditSearchCountry=0x7f0600c1;
+        public static int txtEditSearchWork=0x7f0600c7;
         public static int txtEditSelectArrival=0x7f0600a5;
         public static int txtEditSelectDepartureDate=0x7f06009f;
         public static int txtEditSelectOrigin=0x7f0600a2;
         public static int txtEmail=0x7f060076;
+        public static int txtKeyList=0x7f0600bd;
         public static int txtNewPassword=0x7f060073;
         public static int txtOr=0x7f060080;
         public static int txtPassword=0x7f060077;
-        public static int txtSearchCity=0x7f0600c1;
-        public static int txtSearchCountry=0x7f0600be;
-        public static int txtSearchWork=0x7f0600c4;
+        public static int txtSearchCity=0x7f0600c3;
+        public static int txtSearchCountry=0x7f0600c0;
+        public static int txtSearchWork=0x7f0600c6;
         public static int txtSelectArrival=0x7f0600a4;
         public static int txtSelectDepartureDate=0x7f06009e;
         public static int txtSelectOrigin=0x7f0600a1;
         public static int txtSysLog=0x7f060082;
         public static int txtUserName=0x7f060079;
-        public static int txtViewAddress=0x7f0600cf;
-        public static int txtViewAge=0x7f0600d5;
+        public static int txtValueList=0x7f0600be;
+        public static int txtViewAddress=0x7f0600d1;
+        public static int txtViewAge=0x7f0600d7;
         public static int txtViewArrivalTerminal=0x7f0600bb;
         public static int txtViewArrivalTime=0x7f0600b8;
-        public static int txtViewCity=0x7f0600cc;
-        public static int txtViewCountry=0x7f0600c9;
-        public static int txtViewDates=0x7f0600d8;
+        public static int txtViewCity=0x7f0600ce;
+        public static int txtViewCountry=0x7f0600cb;
+        public static int txtViewDates=0x7f0600da;
         public static int txtViewDestinationCode=0x7f0600b5;
         public static int txtViewDuration=0x7f0600a9;
-        public static int txtViewGender=0x7f0600e3;
+        public static int txtViewGender=0x7f0600e5;
         public static int txtViewOriginCode=0x7f0600ac;
-        public static int txtViewPay=0x7f0600dd;
-        public static int txtViewSpace=0x7f0600e0;
+        public static int txtViewPay=0x7f0600df;
+        public static int txtViewSpace=0x7f0600e2;
         public static int txtViewTerminal=0x7f0600b2;
         public static int txtViewTime=0x7f0600af;
-        public static int txtViewWork=0x7f0600d2;
+        public static int txtViewWork=0x7f0600d4;
         public static int up=0x7f060009;
         public static int useLogo=0x7f060014;
         public static int view_offset_helper=0x7f06000a;
         public static int viewpager=0x7f06007c;
         public static int withText=0x7f060021;
-        public static int work_section=0x7f0600d1;
+        public static int work_section=0x7f0600d3;
         public static int wrap_content=0x7f060022;
     }
     public static final class integer {
@@ -2578,8 +2584,8 @@ containing a value of this type.
         public static int support_simple_spinner_dropdown_item=0x7f03003c;
     }
     public static final class menu {
-        public static int actionbar_main=0x7f0c0000;
-        public static int navmenu=0x7f0c0001;
+        public static int actionbar_main=0x7f0d0000;
+        public static int navmenu=0x7f0d0001;
     }
     public static final class string {
         public static int ApplicationName=0x7f070018;

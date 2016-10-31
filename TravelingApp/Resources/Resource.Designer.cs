@@ -95,6 +95,25 @@ namespace TravelingApp
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0c0001
+			public const int airport_codes = 2131492865;
+			
+			// aapt resource value: 0x7f0c0000
+			public const int testing_airport = 2131492864;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -2806,11 +2825,11 @@ namespace TravelingApp
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0c0000
-			public const int actionbar_main = 2131492864;
+			// aapt resource value: 0x7f0d0000
+			public const int actionbar_main = 2131558400;
 			
-			// aapt resource value: 0x7f0c0001
-			public const int navmenu = 2131492865;
+			// aapt resource value: 0x7f0d0001
+			public const int navmenu = 2131558401;
 			
 			static Menu()
 			{

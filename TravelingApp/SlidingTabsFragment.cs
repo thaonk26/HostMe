@@ -28,10 +28,8 @@ namespace TravelingApp
         private SlidingTabScrollView mSlidingTabScrollView;
         private ViewPager mViewPager;
 
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-
             return inflater.Inflate(Resource.Layout.fragmentpage, container, false);
         }
         public override void OnViewCreated(View view, Bundle savedInstanceState)
@@ -86,11 +84,14 @@ namespace TravelingApp
                 TextView mtxtGender = view.FindViewById<TextView>(Resource.Id.txtDisplayGender);
                 Button search = view.FindViewById<Button>(Resource.Id.btnSearchHost);
 
-                EditText mtxtDepartureDate, mtxtOriginCode, mtxtDestinationCode;
+                EditText mtxtDepartureDate;
+                AutoCompleteTextView mtxtOriginCode, mtxtDestinationCode;
                 TextView mtxtDepartureTime, mtxtArrivalTime, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtArrivalAirportCode, mtxtDepartureTerminal, mtxtArrivalTerminal;
                 Button mbtnSearchAirlines;
+                string[] Airport_Codes;
 
-
+                string input = "User name (sales)";
+                string output = input.Split('(', ')')[1];
 
 
                 container.AddView(view);
@@ -111,12 +112,6 @@ namespace TravelingApp
                   //ParseAndDisplay(obj, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay);
               };
 
-
-
-                if (pos == 1)
-                {
-
-                }
                 if (pos == 2)
                 {
                     view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchAirlinesPage, container, false);
@@ -131,9 +126,15 @@ namespace TravelingApp
 
                     mbtnSearchAirlines = view.FindViewById<Button>(Resource.Id.btnSearchAirline);
 
-                    mtxtOriginCode = view.FindViewById<EditText>(Resource.Id.txtEditSelectOrigin);
                     mtxtDepartureDate = view.FindViewById<EditText>(Resource.Id.txtEditSelectDepartureDate);
-                    mtxtDestinationCode = view.FindViewById<EditText>(Resource.Id.txtEditSelectArrival);
+                    mtxtOriginCode = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSelectOrigin);
+                    mtxtDestinationCode = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSelectArrival);
+
+                    Airport_Codes = view.Resources.GetStringArray(Resource.Array.airport_codes);
+                    ArrayAdapter<string> adapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleListItem1, Airport_Codes);
+                    mtxtOriginCode.Adapter = adapter;
+                    mtxtDestinationCode.Adapter = adapter;
+
 
                     mbtnSearchAirlines.Click += async (s, e) =>
                    {
@@ -232,7 +233,7 @@ namespace TravelingApp
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
                 request.ContentType = "application/json";
                 request.Method = "GET";
-                request.Headers.Add("authorization", "Bearer 5hqcbz9udqznp4kwe2b5dat4");
+                request.Headers.Add("authorization", "Bearer nkqcc9fcx42k6jy9rw8wdu7c");
                 //request.Headers.Add("accept", "application/json");
                 using (WebResponse response = await request.GetResponseAsync())
                 {

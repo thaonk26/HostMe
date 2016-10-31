@@ -28,6 +28,10 @@ public final class R {
         public static final int slide_right=0x7f040010;
         public static final int slide_up=0x7f040011;
     }
+    public static final class array {
+        public static final int airport_codes=0x7f0c0001;
+        public static final int testing_airport=0x7f0c0000;
+    }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -2580,8 +2584,8 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f03003c;
     }
     public static final class menu {
-        public static final int actionbar_main=0x7f0c0000;
-        public static final int navmenu=0x7f0c0001;
+        public static final int actionbar_main=0x7f0d0000;
+        public static final int navmenu=0x7f0d0001;
     }
     public static final class string {
         public static final int ApplicationName=0x7f070018;
