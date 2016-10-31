@@ -10,6 +10,7 @@
     <item>@array/airport_codes</item>
     <item>@array/country_names</item>
     <item>@array/city_names</item>
+    <item>@array/work_type</item>
   </array>
   <string-array name="airport_codes">
 
@@ -58,8 +59,25 @@
     <item>Melbourne</item>
     <item>Sydney</item>
     
+  </string-array>
+
+  <string-array name="work_type">
+
+    <item>bartending</item>
+    <item>cleaning</item>
+    <item>babysitting</item>
+    <item>cleaning/painting</item>
+    <item>cleaning/yard work</item>
+    <item>cooking</item>
+    <item>cleaning/serving</item>
+    <item>cleaning/babysitting</item>
+    <item>teaching English</item>
+    <item>cashier</item>
+    <item>cook</item>
+    <item>cook/babysitting</item>
+    <item>cooking/serving</item>
+    <item>cleaning/clerk</item>
     
   </string-array>
-  
   
 </resources>

@@ -110,6 +110,9 @@ namespace TravelingApp
 			// aapt resource value: 0x7f0c0000
 			public const int testing_airport = 2131492864;
 			
+			// aapt resource value: 0x7f0c0004
+			public const int work_type = 2131492868;
+			
 			static Array()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -71,7 +71,7 @@ namespace TravelingApp
                 view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchHostPage, container, false);
                 AutoCompleteTextView country = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCountry);
                 AutoCompleteTextView city = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCity);
-                EditText work = view.FindViewById<EditText>(Resource.Id.txtEditSearchWork);
+                AutoCompleteTextView work = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchWork);
                 TextView mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
                 TextView mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
                 TextView mtxtWork = view.FindViewById<TextView>(Resource.Id.txtDisplayWork);
@@ -92,14 +92,19 @@ namespace TravelingApp
                 string[] Airport_Codes;
                 string[] Country_Names;
                 string[] City_Names;
+                string[] Work_Type;
 
                 Country_Names = view.Resources.GetStringArray(Resource.Array.country_names);
-                ArrayAdapter<string> countryAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, Country_Names);
+                ArrayAdapter<string> countryAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, Country_Names);
                 country.Adapter = countryAdapter;
 
                 City_Names = view.Resources.GetStringArray(Resource.Array.city_names);
-                ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, City_Names);
+                ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, City_Names);
                 city.Adapter = cityAdapter;
+
+                Work_Type = view.Resources.GetStringArray(Resource.Array.work_type);
+                ArrayAdapter<string> workAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, Work_Type);
+                work.Adapter = workAdapter;
 
                 container.AddView(view);
                 search.Click += (sender, e) =>
@@ -138,7 +143,7 @@ namespace TravelingApp
                     mtxtDestinationCode = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSelectArrival);
 
                     Airport_Codes = view.Resources.GetStringArray(Resource.Array.airport_codes);
-                    ArrayAdapter<string> adapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, Airport_Codes);
+                    ArrayAdapter<string> adapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, Airport_Codes);
                     mtxtOriginCode.Adapter = adapter;
                     mtxtDestinationCode.Adapter = adapter;
 

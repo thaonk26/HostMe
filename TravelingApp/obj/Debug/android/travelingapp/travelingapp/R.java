@@ -33,6 +33,7 @@ public final class R {
         public static final int city_names=0x7f0c0003;
         public static final int country_names=0x7f0c0002;
         public static final int testing_airport=0x7f0c0000;
+        public static final int work_type=0x7f0c0004;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
