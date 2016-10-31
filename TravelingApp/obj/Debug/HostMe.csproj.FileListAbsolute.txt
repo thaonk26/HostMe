@@ -151,7 +151,7 @@ C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\drawable\s
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\drawable\moneyconverter.png
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\R.cs.flag
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\uploadflags.txt
-C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\HostMe.csprojResolveAssemblyReference.cache
+C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\values\themes.xml
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\Microsoft.CSharp.dll.mdb

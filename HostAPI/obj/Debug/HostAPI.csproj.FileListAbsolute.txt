@@ -266,4 +266,3 @@ C:\Users\Nathaniel\Documents\GitHub\HostMe\HostAPI\bin\Microsoft.Owin.Security.M
 C:\Users\Nathaniel\Documents\GitHub\HostMe\HostAPI\bin\System.Web.Http.Owin.xml
 C:\Users\Nathaniel\Documents\GitHub\HostMe\HostAPI\obj\Debug\HostAPI.dll
 C:\Users\Nathaniel\Documents\GitHub\HostMe\HostAPI\obj\Debug\HostAPI.pdb
-C:\Users\Nathaniel\Documents\GitHub\HostMe\HostAPI\obj\Debug\HostAPI.csprojResolveAssemblyReference.cache

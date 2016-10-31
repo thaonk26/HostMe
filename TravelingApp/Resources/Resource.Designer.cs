@@ -101,6 +101,12 @@ namespace TravelingApp
 			// aapt resource value: 0x7f0c0001
 			public const int airport_codes = 2131492865;
 			
+			// aapt resource value: 0x7f0c0003
+			public const int city_names = 2131492867;
+			
+			// aapt resource value: 0x7f0c0002
+			public const int country_names = 2131492866;
+			
 			// aapt resource value: 0x7f0c0000
 			public const int testing_airport = 2131492864;
 			
@@ -2956,6 +2962,9 @@ namespace TravelingApp
 			// aapt resource value: 0x7f090134
 			public const int Animation_Design_BottomSheetDialog = 2131296564;
 			
+			// aapt resource value: 0x7f09014f
+			public const int AutoCompleteTextViewLight = 2131296591;
+			
 			// aapt resource value: 0x7f090081
 			public const int Base_AlertDialog_AppCompat = 2131296385;
 			
@@ -3694,6 +3703,9 @@ namespace TravelingApp
 			// aapt resource value: 0x7f090142
 			public const int Theme_Design_NoActionBar = 2131296578;
 			
+			// aapt resource value: 0x7f090151
+			public const int Theme_Light_NoTitleBar_Workaround = 2131296593;
+			
 			// aapt resource value: 0x7f0900ea
 			public const int ThemeOverlay_AppCompat = 2131296490;
 			
@@ -3942,6 +3954,9 @@ namespace TravelingApp
 			
 			// aapt resource value: 0x7f09014b
 			public const int Widget_Design_TextInputLayout = 2131296587;
+			
+			// aapt resource value: 0x7f090150
+			public const int Widget_DropDownItemLight = 2131296592;
 			
 			// aapt resource value: 0x7f09014c
 			public const int dialog_animation = 2131296588;

@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.IO;
 using Java.Util;
+using Android.Graphics;
 
 namespace TravelingApp
 {
@@ -68,8 +69,8 @@ namespace TravelingApp
                 int pos = position + 1;
 
                 view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchHostPage, container, false);
-                EditText country = view.FindViewById<EditText>(Resource.Id.txtEditSearchCountry);
-                EditText city = view.FindViewById<EditText>(Resource.Id.txtEditSearchCity);
+                AutoCompleteTextView country = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCountry);
+                AutoCompleteTextView city = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCity);
                 EditText work = view.FindViewById<EditText>(Resource.Id.txtEditSearchWork);
                 TextView mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
                 TextView mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
@@ -89,10 +90,16 @@ namespace TravelingApp
                 TextView mtxtDepartureTime, mtxtArrivalTime, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtArrivalAirportCode, mtxtDepartureTerminal, mtxtArrivalTerminal;
                 Button mbtnSearchAirlines;
                 string[] Airport_Codes;
+                string[] Country_Names;
+                string[] City_Names;
 
-                string input = "User name (sales)";
-                string output = input.Split('(', ')')[1];
+                Country_Names = view.Resources.GetStringArray(Resource.Array.country_names);
+                ArrayAdapter<string> countryAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, Country_Names);
+                country.Adapter = countryAdapter;
 
+                City_Names = view.Resources.GetStringArray(Resource.Array.city_names);
+                ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, City_Names);
+                city.Adapter = cityAdapter;
 
                 container.AddView(view);
                 search.Click += (sender, e) =>
@@ -131,14 +138,18 @@ namespace TravelingApp
                     mtxtDestinationCode = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSelectArrival);
 
                     Airport_Codes = view.Resources.GetStringArray(Resource.Array.airport_codes);
-                    ArrayAdapter<string> adapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleListItem1, Airport_Codes);
+                    ArrayAdapter<string> adapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleExpandableListItem1, Airport_Codes);
                     mtxtOriginCode.Adapter = adapter;
                     mtxtDestinationCode.Adapter = adapter;
 
 
+                    
+
                     mbtnSearchAirlines.Click += async (s, e) =>
                    {
-                       string url = "https://api.lufthansa.com/v1/operations/schedules/" + mtxtOriginCode.Text + "/" + mtxtDestinationCode.Text + "/" + mtxtDepartureDate.Text + "?directFlights=0";
+                       string origin = mtxtOriginCode.Text.Split('(', ')')[1];
+                       string destination = mtxtDestinationCode.Text.Split('(', ')')[1];
+                       string url = "https://api.lufthansa.com/v1/operations/schedules/" + origin + "/" + destination + "/" + mtxtDepartureDate.Text + "?directFlights=0";
                        //GetFlight(url, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtTerminal, mtxtArrivalAirportCode, mtxtArrivalTime);
                        JsonValue json = await FetchAirlineAsync(url);
                        ParseAndDisplayFlights(json, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtDepartureTerminal, mtxtArrivalAirportCode, mtxtArrivalTime, mtxtArrivalTerminal);

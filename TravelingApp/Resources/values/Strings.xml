@@ -8,6 +8,8 @@
 
   <array name="testing_airport">
     <item>@array/airport_codes</item>
+    <item>@array/country_names</item>
+    <item>@array/city_names</item>
   </array>
   <string-array name="airport_codes">
 
@@ -22,9 +24,42 @@
     <item>Shanghai Pudong International Airport (CNI)</item>
     <item>Shanghai Pudong International Airport (PVG)</item>
     <item>Sunan Shuofang International Airport (WUX)</item>
-    <item></item>
+
+  </string-array>
+
+  <string-array name="country_names">
+
+    <item>China</item>
+    <item>Japan</item>
+    <item>Malaysia</item>
+    <item>Philippines</item>
+    <item>Taiwan</item>
+    <item>South Korea</item>
+    <item>Thailand</item>
+    <item>Australia</item>
     
     
   </string-array>
 
+  <string-array name="city_names">
+
+    <item>Tokyo</item>
+    <item>Kyoto</item>
+    <item>Nagoya</item>
+    <item>Shanghai</item>
+    <item>Beijing</item>
+    <item>Taichung City</item>
+    <item>Taipei City</item>
+    <item>Seoul</item>
+    <item>Busan</item>
+    <item>Manila</item>
+    <item>Singapore</item>
+    <item>Pattaya</item>
+    <item>Melbourne</item>
+    <item>Sydney</item>
+    
+    
+  </string-array>
+  
+  
 </resources>

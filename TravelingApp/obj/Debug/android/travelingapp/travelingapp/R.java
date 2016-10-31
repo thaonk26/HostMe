@@ -30,6 +30,8 @@ public final class R {
     }
     public static final class array {
         public static final int airport_codes=0x7f0c0001;
+        public static final int city_names=0x7f0c0003;
+        public static final int country_names=0x7f0c0002;
         public static final int testing_airport=0x7f0c0000;
     }
     public static final class attr {
@@ -2623,6 +2625,7 @@ containing a value of this type.
         public static final int Animation_AppCompat_Dialog=0x7f09007f;
         public static final int Animation_AppCompat_DropDownUp=0x7f090080;
         public static final int Animation_Design_BottomSheetDialog=0x7f090134;
+        public static final int AutoCompleteTextViewLight=0x7f09014f;
         public static final int Base_AlertDialog_AppCompat=0x7f090081;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f090082;
         public static final int Base_Animation_AppCompat_Dialog=0x7f090083;
@@ -2869,6 +2872,7 @@ containing a value of this type.
         public static final int Theme_Design_Light_BottomSheetDialog=0x7f090140;
         public static final int Theme_Design_Light_NoActionBar=0x7f090141;
         public static final int Theme_Design_NoActionBar=0x7f090142;
+        public static final int Theme_Light_NoTitleBar_Workaround=0x7f090151;
         public static final int ThemeOverlay_AppCompat=0x7f0900ea;
         public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0900eb;
         public static final int ThemeOverlay_AppCompat_Dark=0x7f0900ec;
@@ -2952,6 +2956,7 @@ containing a value of this type.
         public static final int Widget_Design_Snackbar=0x7f09014a;
         public static final int Widget_Design_TabLayout=0x7f090133;
         public static final int Widget_Design_TextInputLayout=0x7f09014b;
+        public static final int Widget_DropDownItemLight=0x7f090150;
         public static final int dialog_animation=0x7f09014c;
     }
     public static final class styleable {
