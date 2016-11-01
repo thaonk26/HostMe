@@ -10,6 +10,10 @@ TravelingApp.dialog_SignUp, TravelingApp;md5f0a9a422d76cd9d879faf99eadcedaa5.dia
 TravelingApp.dialog_SignUp, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0a9a422d76cd9d879faf99eadcedaa5.dialog_SignUp
 TravelingApp.dialog_SignUp;md5f0a9a422d76cd9d879faf99eadcedaa5.dialog_SignUp
 travelingapp.dialog_SignUp;md5f0a9a422d76cd9d879faf99eadcedaa5.dialog_SignUp
+TravelingApp.ListViewAdapter, TravelingApp;md5f0a9a422d76cd9d879faf99eadcedaa5.ListViewAdapter
+TravelingApp.ListViewAdapter, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0a9a422d76cd9d879faf99eadcedaa5.ListViewAdapter
+TravelingApp.ListViewAdapter;md5f0a9a422d76cd9d879faf99eadcedaa5.ListViewAdapter
+travelingapp.ListViewAdapter;md5f0a9a422d76cd9d879faf99eadcedaa5.ListViewAdapter
 TravelingApp.MainActivity, TravelingApp;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity
 TravelingApp.MainActivity, TravelingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity
 TravelingApp.MainActivity;md5f0a9a422d76cd9d879faf99eadcedaa5.MainActivity

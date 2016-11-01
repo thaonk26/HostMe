@@ -23,12 +23,14 @@
                     android:layout_width="150dp"
                     android:layout_height="25dp"
                     android:gravity="center"
+                    android:layout_weight="50"
                     android:text="Enter Departure Date:" />
                 <EditText
                     android:id="@+id/txtEditSelectDepartureDate"
                     android:layout_width="200dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="50"
                     android:theme="@style/Theme.Light.NoTitleBar.Workaround"
                     android:hint="YYYY-MM-DD" />
             </LinearLayout>
@@ -38,18 +40,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:layout_weight="100"
                 android:id="@+id/layout_origin">
                 <TextView
                     android:id="@+id/txtSelectOrigin"
                     android:layout_width="150dp"
                     android:layout_height="25dp"
                     android:gravity="center"
+                    android:layout_weight="50"
                     android:text="Departure Airport:" />
                 <AutoCompleteTextView
                     android:id="@+id/txtEditSelectOrigin"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="50"
                     android:theme="@style/Theme.Light.NoTitleBar.Workaround"
                     android:hint="Select Departure City"
                     android:gravity="left" />
@@ -60,20 +65,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:layout_weight="100"
                 android:id="@+id/layout_destination">
                 <TextView
                     android:id="@+id/txtSelectArrival"
                     android:layout_width="140dp"
                     android:layout_height="25dp"
                     android:gravity="center"
-                    android:text="Arrival Airport:" />
+                    android:text="Arrival Airport:"
+                    android:layout_weight="50" />
                 <AutoCompleteTextView
                     android:id="@+id/txtEditSelectArrival"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="5dp"
                     android:theme="@style/Theme.Light.NoTitleBar.Workaround"
-                    android:hint="Select Destination City" />
+                    android:hint="Select Destination City"
+                    android:layout_weight="50" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"

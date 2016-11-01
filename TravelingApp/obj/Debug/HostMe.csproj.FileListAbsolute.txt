@@ -152,6 +152,7 @@ C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\drawable\m
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\R.cs.flag
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\uploadflags.txt
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\values\themes.xml
+C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\res\layout\listview_row.xml
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\Microsoft.CSharp.dll.mdb
@@ -193,5 +194,6 @@ C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\android\assets
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\android\assets\TravelingApp.dll.mdb
+C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\HostMe.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\obj\Debug\TravelingApp.dll.mdb
 C:\Users\Nathaniel\Documents\GitHub\HostMe\TravelingApp\bin\Debug\TravelingApp.dll.mdb

@@ -45,6 +45,7 @@ namespace TravelingApp
             List<string> items = new List<string>();
             //TextView mtxtCountry, mtxtCity, mtxtWork;
             View view;
+            List<Host> mItemsHost;
             public SamplePagerAdapter() : base()
             {
                 items.Clear();
@@ -64,7 +65,8 @@ namespace TravelingApp
             }
             public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
             {
-
+                
+                ListView mListViewKey;
 
                 int pos = position + 1;
 
@@ -106,6 +108,10 @@ namespace TravelingApp
                 ArrayAdapter<string> workAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, Work_Type);
                 work.Adapter = workAdapter;
 
+                mListViewKey = view.FindViewById<ListView>(Resource.Id.txtHostListViewKey);
+                
+                
+
                 container.AddView(view);
                 search.Click += (sender, e) =>
              {
@@ -120,7 +126,7 @@ namespace TravelingApp
                   //});
                   // taskA.Start();
 
-                  GetHost(url, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender);
+                  GetHost(url, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender, mListViewKey);
                   //ParseAndDisplay(obj, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay);
               };
 
@@ -279,7 +285,7 @@ namespace TravelingApp
             //    mtxtSpace.Text = hosts["spaceAvailable"].ToString();
             //    mtxtGender.Text = hosts["gender"];
             //}
-            private async void GetHost(string url, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender)
+            private async void GetHost(string url, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender, ListView mtxtHostKey)
             {
                 List<RootObject> rootResult = new List<RootObject>();
                 List<RootObject> temp = new List<RootObject>();
@@ -293,10 +299,10 @@ namespace TravelingApp
 
                     }
                     //return rootResult;
-                    ParseAndDisplay(rootResult, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender);
+                    ParseAndDisplay(rootResult, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender, mtxtHostKey);
                 }
             }
-            private void ParseAndDisplay(List<RootObject> json, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender)
+            private void ParseAndDisplay(List<RootObject> json, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender, ListView mtxtHostKey)
             {
                 string temp = "";
                 for (int i = 0; i < json[0].datesAvailable.Count; i++)
@@ -315,7 +321,23 @@ namespace TravelingApp
                 mtxtSpace.Text = json[0].spaceAvailable.ToString();
                 mtxtGender.Text = json[0].gender;
 
+                mItemsHost = new List<Host>();
+                mItemsHost.Add(new Host() { key = "Country", value = json[0].country });
+                mItemsHost.Add(new Host() { key = "City", value = json[0].city });
+                mItemsHost.Add(new Host() { key = "Work", value = json[0].work });
+                mItemsHost.Add(new Host() { key = "Address", value = json[0].address });
+                mItemsHost.Add(new Host() { key = "Pay", value = json[0].pay.ToString() });
+                mItemsHost.Add(new Host() { key = "Age", value = json[0].age });
+                mItemsHost.Add(new Host() { key = "Duration", value = json[0].duration });
+                mItemsHost.Add(new Host() { key = "Date", value = temp });
+                mItemsHost.Add(new Host() { key = "Space Available", value = json[0].spaceAvailable.ToString() });
+                mItemsHost.Add(new Host() { key = "Gender", value = json[0].gender });
 
+
+                ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);
+                mtxtHostKey.Adapter = adapter;
+
+                
             }
             public string GetHeaderTitle(int position)
             {

@@ -99,6 +99,8 @@
     <Compile Include="dialog_Change_Password.cs" />
     <Compile Include="dialog_SignIn.cs" />
     <Compile Include="dialog_SignUp.cs" />
+    <Compile Include="Host.cs" />
+    <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MoneyConvertActivity.cs" />
     <Compile Include="MyActionBarDrawerToggle.cs" />
@@ -150,6 +152,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\MoneyConvertPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\listview_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
