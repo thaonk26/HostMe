@@ -74,17 +74,7 @@ namespace TravelingApp
                 AutoCompleteTextView country = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCountry);
                 AutoCompleteTextView city = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchCity);
                 AutoCompleteTextView work = view.FindViewById<AutoCompleteTextView>(Resource.Id.txtEditSearchWork);
-                TextView mtxtCountry = view.FindViewById<TextView>(Resource.Id.txtDisplayCountry);
-                TextView mtxtCity = view.FindViewById<TextView>(Resource.Id.txtDisplayCity);
-                TextView mtxtWork = view.FindViewById<TextView>(Resource.Id.txtDisplayWork);
-                TextView mtxtAddress = view.FindViewById<TextView>(Resource.Id.txtDisplayAddress);
-                TextView mtxtPay = view.FindViewById<TextView>(Resource.Id.txtDisplayPay);
-
-                TextView mtxtAge = view.FindViewById<TextView>(Resource.Id.txtDisplayAge);
-                TextView mtxtDate = view.FindViewById<TextView>(Resource.Id.txtDisplayDates);
-                TextView mtxtDuration = view.FindViewById<TextView>(Resource.Id.txtDisplayDuration);
-                TextView mtxtSpace = view.FindViewById<TextView>(Resource.Id.txtDisplaySpace);
-                TextView mtxtGender = view.FindViewById<TextView>(Resource.Id.txtDisplayGender);
+                
                 Button search = view.FindViewById<Button>(Resource.Id.btnSearchHost);
 
                 EditText mtxtDepartureDate;
@@ -126,7 +116,7 @@ namespace TravelingApp
                   //});
                   // taskA.Start();
 
-                  GetHost(url, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender, mListViewKey);
+                  GetHost(url, mListViewKey);
                   //ParseAndDisplay(obj, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay);
               };
 
@@ -285,7 +275,7 @@ namespace TravelingApp
             //    mtxtSpace.Text = hosts["spaceAvailable"].ToString();
             //    mtxtGender.Text = hosts["gender"];
             //}
-            private async void GetHost(string url, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender, ListView mtxtHostKey)
+            private async void GetHost(string url, ListView mtxtHostKey)
             {
                 List<RootObject> rootResult = new List<RootObject>();
                 List<RootObject> temp = new List<RootObject>();
@@ -299,10 +289,10 @@ namespace TravelingApp
 
                     }
                     //return rootResult;
-                    ParseAndDisplay(rootResult, mtxtCountry, mtxtCity, mtxtWork, mtxtAddress, mtxtPay, mtxtAge, mtxtDate, mtxtDuration, mtxtSpace, mtxtGender, mtxtHostKey);
+                    ParseAndDisplay(rootResult, mtxtHostKey);
                 }
             }
-            private void ParseAndDisplay(List<RootObject> json, TextView mtxtCountry, TextView mtxtCity, TextView mtxtWork, TextView mtxtAddress, TextView mtxtPay, TextView mtxtAge, TextView mtxtDate, TextView mtxtDuration, TextView mtxtSpace, TextView mtxtGender, ListView mtxtHostKey)
+            private void ParseAndDisplay(List<RootObject> json,  ListView mtxtHostKey)
             {
                 string temp = "";
                 for (int i = 0; i < json[0].datesAvailable.Count; i++)
@@ -310,28 +300,17 @@ namespace TravelingApp
                     temp += Convert.ToString(json[0].datesAvailable[i]);
                 }
 
-                mtxtCountry.Text = json[0].country;
-                mtxtCity.Text = json[0].city;
-                mtxtWork.Text = json[0].work;
-                mtxtAddress.Text = json[0].address;
-                mtxtPay.Text = "$" + json[0].pay.ToString() + "USD";
-                mtxtAge.Text = json[0].age;
-                mtxtDuration.Text = json[0].duration;
-                mtxtDate.Text = temp;
-                mtxtSpace.Text = json[0].spaceAvailable.ToString();
-                mtxtGender.Text = json[0].gender;
-
                 mItemsHost = new List<Host>();
-                mItemsHost.Add(new Host() { key = "Country", value = json[0].country });
-                mItemsHost.Add(new Host() { key = "City", value = json[0].city });
-                mItemsHost.Add(new Host() { key = "Work", value = json[0].work });
-                mItemsHost.Add(new Host() { key = "Address", value = json[0].address });
-                mItemsHost.Add(new Host() { key = "Pay", value = json[0].pay.ToString() });
-                mItemsHost.Add(new Host() { key = "Age", value = json[0].age });
-                mItemsHost.Add(new Host() { key = "Duration", value = json[0].duration });
-                mItemsHost.Add(new Host() { key = "Date", value = temp });
-                mItemsHost.Add(new Host() { key = "Space Available", value = json[0].spaceAvailable.ToString() });
-                mItemsHost.Add(new Host() { key = "Gender", value = json[0].gender });
+                mItemsHost.Add(new Host() { key = "Country: ", value = json[0].country });
+                mItemsHost.Add(new Host() { key = "City: ", value = json[0].city });
+                mItemsHost.Add(new Host() { key = "Work: ", value = json[0].work });
+                mItemsHost.Add(new Host() { key = "Address: ", value = json[0].address });
+                mItemsHost.Add(new Host() { key = "Pay: ", value = "$" + json[0].pay.ToString() + "USD"});
+                mItemsHost.Add(new Host() { key = "Age: ", value = json[0].age });
+                mItemsHost.Add(new Host() { key = "Duration: ", value = json[0].duration });
+                mItemsHost.Add(new Host() { key = "Date: ", value = temp });
+                mItemsHost.Add(new Host() { key = "Space: ", value = json[0].spaceAvailable.ToString() });
+                mItemsHost.Add(new Host() { key = "Gender: ", value = json[0].gender });
 
 
                 ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);

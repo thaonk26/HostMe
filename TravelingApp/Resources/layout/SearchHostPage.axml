@@ -29,7 +29,7 @@
                 <AutoCompleteTextView
                     android:id="@+id/txtEditSearchCountry"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"          
+                    android:layout_height="40dp"
                     android:theme="@style/Theme.Light.NoTitleBar.Workaround"
                     android:hint="Search Country" />
             </LinearLayout>
@@ -68,8 +68,8 @@
                     android:layout_marginRight="5dp"
                     android:gravity="right"
                     android:text="Enter Work Type:" />
-              <AutoCompleteTextView
-                  android:id="@+id/txtEditSearchWork"
+                <AutoCompleteTextView
+                    android:id="@+id/txtEditSearchWork"
                     android:layout_width="180dp"
                     android:layout_height="40dp"
                     android:theme="@style/Theme.Light.NoTitleBar.Workaround"
@@ -90,243 +90,18 @@
                     android:id="@+id/btnSearchHost" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/country_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewCountry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Country:" />
-                <TextView
-                    android:id="@+id/txtDisplayCountry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/city_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewCity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="City:" />
-                <TextView
-                    android:id="@+id/txtDisplayCity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/address_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Address:" />
-                <TextView
-                    android:id="@+id/txtDisplayAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/work_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewWork"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Work:" />
-                <TextView
-                    android:id="@+id/txtDisplayWork"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/age_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewAge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Age:" />
-                <TextView
-                    android:id="@+id/txtDisplayAge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/dates_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewDates"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Dates Available:" />
-                <TextView
-                    android:id="@+id/txtDisplayDates"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/duration_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Duration:" />
-                <TextView
-                    android:id="@+id/txtDisplayDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/pay_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewPay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Pay:" />
-                <TextView
-                    android:id="@+id/txtDisplayPay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/space_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewSpace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Space Available:" />
-                <TextView
-                    android:id="@+id/txtDisplaySpace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/Gender_section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
-                <TextView
-                    android:id="@+id/txtViewGender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="Gender:" />
-                <TextView
-                    android:id="@+id/txtDisplayGender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="left"
-                    android:text="" />
-            </LinearLayout>
-          <LinearLayout
                 android:id="@+id/ListView_Section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="40dp"
-                android:layout_weight="100"
                 android:layout_marginRight="40dp">
-            <ListView
-                android:id="@+id/txtHostListViewKey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ListView
-                android:id="@+id/txtHostListViewValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-          </LinearLayout>
+                <ListView
+                    android:id="@+id/txtHostListViewKey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
         </TableLayout>
     </ScrollView>
 </LinearLayout>

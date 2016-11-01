@@ -1871,11 +1871,8 @@ namespace TravelingApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0600e6
-			public const int Gender_section = 2131099878;
-			
-			// aapt resource value: 0x7f0600e9
-			public const int ListView_Section = 2131099881;
+			// aapt resource value: 0x7f0600cc
+			public const int ListView_Section = 2131099852;
 			
 			// aapt resource value: 0x7f06008b
 			public const int action0 = 2131099787;
@@ -1924,12 +1921,6 @@ namespace TravelingApp
 			
 			// aapt resource value: 0x7f06003d
 			public const int activity_chooser_view_content = 2131099709;
-			
-			// aapt resource value: 0x7f0600d2
-			public const int address_section = 2131099858;
-			
-			// aapt resource value: 0x7f0600d8
-			public const int age_section = 2131099864;
 			
 			// aapt resource value: 0x7f060049
 			public const int alertTitle = 2131099721;
@@ -1997,9 +1988,6 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060092
 			public const int chronometer = 2131099794;
 			
-			// aapt resource value: 0x7f0600cf
-			public const int city_section = 2131099855;
-			
 			// aapt resource value: 0x7f060033
 			public const int clip_horizontal = 2131099699;
 			
@@ -2015,17 +2003,11 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06007f
 			public const int content_fragment = 2131099775;
 			
-			// aapt resource value: 0x7f0600cc
-			public const int country_section = 2131099852;
-			
 			// aapt resource value: 0x7f060050
 			public const int custom = 2131099728;
 			
 			// aapt resource value: 0x7f06004f
 			public const int customPanel = 2131099727;
-			
-			// aapt resource value: 0x7f0600db
-			public const int dates_section = 2131099867;
 			
 			// aapt resource value: 0x7f060058
 			public const int decor_content_parent = 2131099736;
@@ -2066,14 +2048,11 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06009b
 			public const int drawer_layout = 2131099803;
 			
-			// aapt resource value: 0x7f0600ee
-			public const int drawer_layout_search = 2131099886;
+			// aapt resource value: 0x7f0600d0
+			public const int drawer_layout_search = 2131099856;
 			
 			// aapt resource value: 0x7f0600aa
 			public const int duration = 2131099818;
-			
-			// aapt resource value: 0x7f0600de
-			public const int duration_section = 2131099870;
 			
 			// aapt resource value: 0x7f06005c
 			public const int edit_query = 2131099740;
@@ -2183,8 +2162,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06008e
 			public const int media_actions = 2131099790;
 			
-			// aapt resource value: 0x7f0600f1
-			public const int menu = 2131099889;
+			// aapt resource value: 0x7f0600d3
+			public const int menu = 2131099859;
 			
 			// aapt resource value: 0x7f06001c
 			public const int middle = 2131099676;
@@ -2195,20 +2174,20 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060015
 			public const int multiply = 2131099669;
 			
-			// aapt resource value: 0x7f0600f4
-			public const int nav_convert = 2131099892;
+			// aapt resource value: 0x7f0600d6
+			public const int nav_convert = 2131099862;
 			
-			// aapt resource value: 0x7f0600f2
-			public const int nav_home = 2131099890;
+			// aapt resource value: 0x7f0600d4
+			public const int nav_home = 2131099860;
 			
-			// aapt resource value: 0x7f0600f3
-			public const int nav_search = 2131099891;
+			// aapt resource value: 0x7f0600d5
+			public const int nav_search = 2131099861;
 			
 			// aapt resource value: 0x7f06009e
 			public const int nav_view = 2131099806;
 			
-			// aapt resource value: 0x7f0600f0
-			public const int nav_view_search = 2131099888;
+			// aapt resource value: 0x7f0600d2
+			public const int nav_view_search = 2131099858;
 			
 			// aapt resource value: 0x7f06006d
 			public const int navigation_header_container = 2131099757;
@@ -2227,9 +2206,6 @@ namespace TravelingApp
 			
 			// aapt resource value: 0x7f060046
 			public const int parentPanel = 2131099718;
-			
-			// aapt resource value: 0x7f0600e0
-			public const int pay_section = 2131099872;
 			
 			// aapt resource value: 0x7f060029
 			public const int pin = 2131099689;
@@ -2282,14 +2258,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060060
 			public const int search_edit_frame = 2131099744;
 			
-			// aapt resource value: 0x7f0600ef
-			public const int search_fragment = 2131099887;
+			// aapt resource value: 0x7f0600d1
+			public const int search_fragment = 2131099857;
 			
 			// aapt resource value: 0x7f060066
 			public const int search_go_btn = 2131099750;
 			
-			// aapt resource value: 0x7f0600ec
-			public const int search_layout = 2131099884;
+			// aapt resource value: 0x7f0600ce
+			public const int search_layout = 2131099854;
 			
 			// aapt resource value: 0x7f060061
 			public const int search_mag_icon = 2131099745;
@@ -2329,9 +2305,6 @@ namespace TravelingApp
 			
 			// aapt resource value: 0x7f060027
 			public const int snap = 2131099687;
-			
-			// aapt resource value: 0x7f0600e3
-			public const int space_section = 2131099875;
 			
 			// aapt resource value: 0x7f060045
 			public const int spacer = 2131099717;
@@ -2381,8 +2354,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06009a
 			public const int toolbar = 2131099802;
 			
-			// aapt resource value: 0x7f0600ed
-			public const int toolbar_search = 2131099885;
+			// aapt resource value: 0x7f0600cf
+			public const int toolbar_search = 2131099855;
 			
 			// aapt resource value: 0x7f060032
 			public const int top = 2131099698;
@@ -2408,29 +2381,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f060072
 			public const int txtCurrentPassword = 2131099762;
 			
-			// aapt resource value: 0x7f0600d4
-			public const int txtDisplayAddress = 2131099860;
-			
-			// aapt resource value: 0x7f0600da
-			public const int txtDisplayAge = 2131099866;
-			
 			// aapt resource value: 0x7f0600be
 			public const int txtDisplayArrivalTerminal = 2131099838;
 			
 			// aapt resource value: 0x7f0600bb
 			public const int txtDisplayArrivalTime = 2131099835;
 			
-			// aapt resource value: 0x7f0600d1
-			public const int txtDisplayCity = 2131099857;
-			
 			// aapt resource value: 0x7f060089
 			public const int txtDisplayConvertMoney = 2131099785;
-			
-			// aapt resource value: 0x7f0600ce
-			public const int txtDisplayCountry = 2131099854;
-			
-			// aapt resource value: 0x7f0600dd
-			public const int txtDisplayDates = 2131099869;
 			
 			// aapt resource value: 0x7f0600b2
 			public const int txtDisplayDepartureTime = 2131099826;
@@ -2438,29 +2396,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f0600b8
 			public const int txtDisplayDestinationCode = 2131099832;
 			
-			// aapt resource value: 0x7f0600df
-			public const int txtDisplayDuration = 2131099871;
-			
 			// aapt resource value: 0x7f0600ac
 			public const int txtDisplayDurationFlight = 2131099820;
-			
-			// aapt resource value: 0x7f0600e8
-			public const int txtDisplayGender = 2131099880;
 			
 			// aapt resource value: 0x7f0600af
 			public const int txtDisplayOriginCode = 2131099823;
 			
-			// aapt resource value: 0x7f0600e2
-			public const int txtDisplayPay = 2131099874;
-			
-			// aapt resource value: 0x7f0600e5
-			public const int txtDisplaySpace = 2131099877;
-			
 			// aapt resource value: 0x7f0600b5
 			public const int txtDisplayTerminal = 2131099829;
-			
-			// aapt resource value: 0x7f0600d7
-			public const int txtDisplayWork = 2131099863;
 			
 			// aapt resource value: 0x7f060087
 			public const int txtEditCurrentMoney = 2131099783;
@@ -2489,11 +2432,8 @@ namespace TravelingApp
 			// aapt resource value: 0x7f06007d
 			public const int txtHostKey = 2131099773;
 			
-			// aapt resource value: 0x7f0600ea
-			public const int txtHostListViewKey = 2131099882;
-			
-			// aapt resource value: 0x7f0600eb
-			public const int txtHostListViewValue = 2131099883;
+			// aapt resource value: 0x7f0600cd
+			public const int txtHostListViewKey = 2131099853;
 			
 			// aapt resource value: 0x7f06007e
 			public const int txtHostValue = 2131099774;
@@ -2537,26 +2477,11 @@ namespace TravelingApp
 			// aapt resource value: 0x7f0600c0
 			public const int txtValueList = 2131099840;
 			
-			// aapt resource value: 0x7f0600d3
-			public const int txtViewAddress = 2131099859;
-			
-			// aapt resource value: 0x7f0600d9
-			public const int txtViewAge = 2131099865;
-			
 			// aapt resource value: 0x7f0600bd
 			public const int txtViewArrivalTerminal = 2131099837;
 			
 			// aapt resource value: 0x7f0600ba
 			public const int txtViewArrivalTime = 2131099834;
-			
-			// aapt resource value: 0x7f0600d0
-			public const int txtViewCity = 2131099856;
-			
-			// aapt resource value: 0x7f0600cd
-			public const int txtViewCountry = 2131099853;
-			
-			// aapt resource value: 0x7f0600dc
-			public const int txtViewDates = 2131099868;
 			
 			// aapt resource value: 0x7f0600b7
 			public const int txtViewDestinationCode = 2131099831;
@@ -2564,26 +2489,14 @@ namespace TravelingApp
 			// aapt resource value: 0x7f0600ab
 			public const int txtViewDuration = 2131099819;
 			
-			// aapt resource value: 0x7f0600e7
-			public const int txtViewGender = 2131099879;
-			
 			// aapt resource value: 0x7f0600ae
 			public const int txtViewOriginCode = 2131099822;
-			
-			// aapt resource value: 0x7f0600e1
-			public const int txtViewPay = 2131099873;
-			
-			// aapt resource value: 0x7f0600e4
-			public const int txtViewSpace = 2131099876;
 			
 			// aapt resource value: 0x7f0600b4
 			public const int txtViewTerminal = 2131099828;
 			
 			// aapt resource value: 0x7f0600b1
 			public const int txtViewTime = 2131099825;
-			
-			// aapt resource value: 0x7f0600d6
-			public const int txtViewWork = 2131099862;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
@@ -2599,9 +2512,6 @@ namespace TravelingApp
 			
 			// aapt resource value: 0x7f060021
 			public const int withText = 2131099681;
-			
-			// aapt resource value: 0x7f0600d5
-			public const int work_section = 2131099861;
 			
 			// aapt resource value: 0x7f060022
 			public const int wrap_content = 2131099682;
