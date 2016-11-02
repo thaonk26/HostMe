@@ -19,7 +19,6 @@ namespace TravelingApp
     [Activity(Label = "ProfileActivity", Theme ="@style/MyTheme")]
     class ProfileActivity : AppCompatActivity
     {
-        private Button mBtnSavedItems;
         private Button mBtnChangePassword;
 
         private SupportToolbar mToolbar;
@@ -42,7 +41,7 @@ namespace TravelingApp
 
             SetSupportActionBar(mToolbar);
 
-            mBtnSavedItems = FindViewById<Button>(Resource.Id.btnSavedItems);
+            
             mBtnChangePassword = FindViewById<Button>(Resource.Id.btnChangePassword);
 
             mBtnChangePassword.Click += (object sender, EventArgs args) =>
@@ -108,7 +107,11 @@ namespace TravelingApp
                     Intent intentConvert = new Intent(this, typeof(MoneyConvertActivity));
                     StartActivity(intentConvert);
                     break;
-
+                case (Resource.Id.nav_logout):
+                    Toast.MakeText(this, "Logged Out", ToastLength.Short).Show();
+                    Intent intentLogout = new Intent(this, typeof(MainActivity));
+                    StartActivity(intentLogout);
+                    break;
             }
         }
 

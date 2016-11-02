@@ -107,7 +107,10 @@ namespace TravelingApp
                     Intent intentConvert = new Intent(this, typeof(MoneyConvertActivity));
                     StartActivity(intentConvert);
                     break;
-
+                case (Resource.Id.nav_logout):
+                    Intent intentLogout = new Intent(this, typeof(MainActivity));
+                    StartActivity(intentLogout);
+                    break;
             }
         }
 

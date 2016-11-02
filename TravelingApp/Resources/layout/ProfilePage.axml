@@ -31,11 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnChangePassword" />
-            <Button
-                android:text="Saved Items"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnSavedItems" />
         </LinearLayout>
     <!-- The Left Navigation Drawer -->
     <!--<ListView

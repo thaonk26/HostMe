@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">TravelingApp</string>
+    <string name="ApplicationName">HostMe</string>
     <string name="BottomLine">Welcome</string>
     <string name="openDrawer">NavBar</string>
     <string name="closeDrawer">Profile</string>

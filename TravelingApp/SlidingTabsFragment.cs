@@ -175,15 +175,14 @@ namespace TravelingApp
                 
                 mItemsHost = new List<TravelingApp.Host>();
 
-                for (int i = 0; i < schedule.Count; i++)
-                {
-                    JsonValue totalyJourney = schedule[i]["TotalJourney"];       
+                
+                    JsonValue totalyJourney = schedule[0]["TotalJourney"];       
                     mItemsHost.Add(new Host() { key = "Flight Duration: ", value = totalyJourney["Duration"] });
 
                     try
                     {
-                        flight = schedule[i]["Flight"];
-                        departure = flight[i]["Departure"];
+                        flight = schedule[0]["Flight"];
+                        departure = flight[0]["Departure"];
                         string departureCode = departure["AirportCode"];
                         string departureTime = departure["ScheduledTimeLocal"]["DateTime"];
                         mItemsHost.Add(new Host() { key = "Departure Code: ", value = departureCode.ToString() });
@@ -200,8 +199,8 @@ namespace TravelingApp
                     }
                     try
                     {
-                        flight = schedule[i]["Flight"];
-                        arrival = flight[i]["Arrival"];
+                        flight = schedule[0]["Flight"];
+                        arrival = flight[0]["Arrival"];
                         string arrivalCode = arrival["AirportCode"];
                         string arrivalTime = arrival["ScheduledTimeLocal"]["DateTime"];
                         mItemsHost.Add(new Host() { key = "Arrival Code: ", value = arrivalCode.ToString() });
@@ -228,7 +227,7 @@ namespace TravelingApp
                         mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
                     }
                     catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
-                }
+                
                 ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);
                 mListViewKeyAirlines.Adapter = adapter;
             }
