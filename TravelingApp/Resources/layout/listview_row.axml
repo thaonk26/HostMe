@@ -12,6 +12,7 @@
         android:id="@+id/txtHostKey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/HostFont"
         android:layout_weight="80"
         android:gravity="right"
         android:text="Gender:" />
@@ -19,6 +20,7 @@
         android:id="@+id/txtHostValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/HostFont"
         android:layout_weight="20"
         android:layout_marginLeft="5dp"
         android:gravity="left"

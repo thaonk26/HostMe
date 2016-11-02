@@ -3,15 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp">
-        <TableLayout
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:stretchColumns="1">
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
@@ -95,13 +87,12 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp">
                 <ListView
                     android:id="@+id/txtHostListViewKey"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent" />
             </LinearLayout>
-        </TableLayout>
-    </ScrollView>
+
 </LinearLayout>

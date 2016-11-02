@@ -66,7 +66,7 @@ namespace TravelingApp
             public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
             {
                 
-                ListView mListViewKey;
+                ListView mListViewKey, mListViewKeyAirlines;
 
                 int pos = position + 1;
 
@@ -88,6 +88,7 @@ namespace TravelingApp
 
                 Country_Names = view.Resources.GetStringArray(Resource.Array.country_names);
                 ArrayAdapter<string> countryAdapter = new ArrayAdapter<string>(Application.Context, Android.Resource.Layout.SimpleDropDownItem1Line, Country_Names);
+                
                 country.Adapter = countryAdapter;
 
                 City_Names = view.Resources.GetStringArray(Resource.Array.city_names);
@@ -124,13 +125,13 @@ namespace TravelingApp
                 {
                     view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.SearchAirlinesPage, container, false);
                     container.AddView(view);
-                    mtxtDurationFlight = view.FindViewById<TextView>(Resource.Id.txtDisplayDurationFlight);
-                    mtxtDepartureAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayOriginCode);
-                    mtxtDepartureTime = view.FindViewById<TextView>(Resource.Id.txtDisplayDepartureTime);
-                    mtxtDepartureTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayTerminal);
-                    mtxtArrivalAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayDestinationCode);
-                    mtxtArrivalTime = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTime);
-                    mtxtArrivalTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTerminal);
+                    //mtxtDurationFlight = view.FindViewById<TextView>(Resource.Id.txtDisplayDurationFlight);
+                    //mtxtDepartureAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayOriginCode);
+                    //mtxtDepartureTime = view.FindViewById<TextView>(Resource.Id.txtDisplayDepartureTime);
+                    //mtxtDepartureTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayTerminal);
+                    //mtxtArrivalAirportCode = view.FindViewById<TextView>(Resource.Id.txtDisplayDestinationCode);
+                    //mtxtArrivalTime = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTime);
+                    //mtxtArrivalTerminal = view.FindViewById<TextView>(Resource.Id.txtDisplayArrivalTerminal);
 
                     mbtnSearchAirlines = view.FindViewById<Button>(Resource.Id.btnSearchAirline);
 
@@ -143,8 +144,8 @@ namespace TravelingApp
                     mtxtOriginCode.Adapter = adapter;
                     mtxtDestinationCode.Adapter = adapter;
 
+                    mListViewKeyAirlines = view.FindViewById<ListView>(Resource.Id.txtHostListViewKeyAirlines);
 
-                    
 
                     mbtnSearchAirlines.Click += async (s, e) =>
                    {
@@ -152,67 +153,84 @@ namespace TravelingApp
                        string destination = mtxtDestinationCode.Text.Split('(', ')')[1];
                        string url = "https://api.lufthansa.com/v1/operations/schedules/" + origin + "/" + destination + "/" + mtxtDepartureDate.Text + "?directFlights=0";
                        //GetFlight(url, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtTerminal, mtxtArrivalAirportCode, mtxtArrivalTime);
+                       try
+                       {
+
                        JsonValue json = await FetchAirlineAsync(url);
-                       ParseAndDisplayFlights(json, mtxtDurationFlight, mtxtDepartureAirportCode, mtxtDepartureTime, mtxtDepartureTerminal, mtxtArrivalAirportCode, mtxtArrivalTime, mtxtArrivalTerminal);
+                       ParseAndDisplayFlights(json, mListViewKeyAirlines);
+                       }catch(InvalidCastException ex)
+                       {
+                           Toast.MakeText(Application.Context, ex.Message, ToastLength.Short).Show();
+                       }
                    };
                 }
                 return view;
             }
 
-            private void ParseAndDisplayFlights(JsonValue json, TextView mDurationFlight, TextView mDepartureAirportCode, TextView mDepartureTime, TextView mDepartureTerminal, TextView mArrivalAirportCode, TextView mArrivalTime, TextView mArrivalTerminal)
+            private void ParseAndDisplayFlights(JsonValue json, ListView mListViewKeyAirlines)
             {
                 JsonValue scheduleResource = json["ScheduleResource"];
                 JsonValue schedule = scheduleResource["Schedule"];
-                JsonValue totalyJourney = schedule[0]["TotalJourney"];
+                JsonValue departure, arrival, flight;
+                
+                mItemsHost = new List<TravelingApp.Host>();
 
-                mDurationFlight.Text = totalyJourney["Duration"];
+                for (int i = 0; i < schedule.Count; i++)
+                {
+                    JsonValue totalyJourney = schedule[i]["TotalJourney"];       
+                    mItemsHost.Add(new Host() { key = "Flight Duration: ", value = totalyJourney["Duration"] });
 
-                JsonValue flight = schedule[0]["Flight"];
-                JsonValue departure, arrival;
-                try
-                {
-                    departure = flight[0]["Departure"];
-                    JsonValue dAirportCode = departure["AirportCode"];
-                    JsonValue dDateTime = departure["ScheduledTimeLocal"]["DateTime"];
-                    mDepartureAirportCode.Text = dAirportCode;
-                    mDepartureTime.Text = dDateTime;
+                    try
+                    {
+                        flight = schedule[i]["Flight"];
+                        departure = flight[i]["Departure"];
+                        string departureCode = departure["AirportCode"];
+                        string departureTime = departure["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Departure Code: ", value = departureCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Departure Time: ", value = departureTime });
+                    }
+                    catch
+                    {
+                        flight = schedule["Flight"];
+                        departure = flight["Departure"];
+                        string departureCode = departure["AirportCode"];
+                        string departureTime = departure["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Departure Code: ", value = departureCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Departure Time: ", value = departureTime });
+                    }
+                    try
+                    {
+                        flight = schedule[i]["Flight"];
+                        arrival = flight[i]["Arrival"];
+                        string arrivalCode = arrival["AirportCode"];
+                        string arrivalTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Arrival Code: ", value = arrivalCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Arrival Time: ", value = arrivalTime });
+                    }
+                    catch
+                    {
+                        flight = schedule["Flight"];
+                        arrival = flight["Arrival"];
+                        string arrivalCode = arrival["AirportCode"];
+                        string arrivalTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Arrival Code: ", value = arrivalCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Arrival Time: ", value = arrivalTime });
+                    }
+                    try
+                    {
+                        string departureTerminal = departure["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = departureTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = "To be Announced" }); }
+                    try
+                    {
+                        string arrivalTerminal = arrival["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
                 }
-                catch
-                {
-                    departure = flight["Departure"];
-                    JsonValue dAirportCode = departure["AirportCode"];
-                    JsonValue dDateTime = departure["ScheduledTimeLocal"]["DateTime"];
-                    mDepartureAirportCode.Text = dAirportCode;
-                    mDepartureTime.Text = dDateTime;
-                }
-                try
-                {
-                    arrival = flight[0]["Arrival"];
-                    JsonValue aAirportCode = arrival["AirportCode"];
-                    JsonValue aDateTime = arrival["ScheduledTimeLocal"]["DateTime"];
-                    mArrivalAirportCode.Text = aAirportCode;
-                    mArrivalTime.Text = aDateTime;
-                }
-                catch
-                {
-                    arrival = flight["Arrival"];
-                    JsonValue aAirportCode = arrival["AirportCode"];
-                    JsonValue aDateTime = arrival["ScheduledTimeLocal"]["DateTime"];
-                    mArrivalAirportCode.Text = aAirportCode;
-                    mArrivalTime.Text = aDateTime;
-                }
-                try
-                {
-                    JsonValue dTerminal = departure["Terminal"]["Name"];
-                    mDepartureTerminal.Text = dTerminal;
-                } catch { mDepartureTerminal.Text = "To be Announced"; }
-                try
-                {
-                    JsonValue aTerminal = arrival["Terminal"]["Name"];
-                    mArrivalTerminal.Text = aTerminal;
-                }
-                catch { mArrivalTerminal.Text = "To be Announced"; }
-
+                ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);
+                mListViewKeyAirlines.Adapter = adapter;
             }
 
             //private async void GetFlight(string url, TextView mDurationFlight, TextView mDepartureAirportCode, TextView mDepartureTime, TextView mTerminal, TextView mArrivalAirportCode, TextView mArrivalTime)
@@ -245,7 +263,7 @@ namespace TravelingApp
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
                 request.ContentType = "application/json";
                 request.Method = "GET";
-                request.Headers.Add("authorization", "Bearer nkqcc9fcx42k6jy9rw8wdu7c");
+                request.Headers.Add("authorization", "Bearer f99p6j372m3n6uzxz7ee7afm");
                 //request.Headers.Add("accept", "application/json");
                 using (WebResponse response = await request.GetResponseAsync())
                 {
@@ -301,19 +319,28 @@ namespace TravelingApp
                 }
 
                 mItemsHost = new List<Host>();
-                mItemsHost.Add(new Host() { key = "Country: ", value = json[0].country });
-                mItemsHost.Add(new Host() { key = "City: ", value = json[0].city });
-                mItemsHost.Add(new Host() { key = "Work: ", value = json[0].work });
-                mItemsHost.Add(new Host() { key = "Address: ", value = json[0].address });
-                mItemsHost.Add(new Host() { key = "Pay: ", value = "$" + json[0].pay.ToString() + "USD"});
-                mItemsHost.Add(new Host() { key = "Age: ", value = json[0].age });
-                mItemsHost.Add(new Host() { key = "Duration: ", value = json[0].duration });
-                mItemsHost.Add(new Host() { key = "Date: ", value = temp });
-                mItemsHost.Add(new Host() { key = "Space: ", value = json[0].spaceAvailable.ToString() });
-                mItemsHost.Add(new Host() { key = "Gender: ", value = json[0].gender });
+                for (int i = 0; i < json.Count; i++)
+                {
+                    try
+                    {
 
-
+                        mItemsHost.Add(new Host() { key = "Country: ", value = json[i].country });
+                        mItemsHost.Add(new Host() { key = "City: ", value = json[i].city });
+                        mItemsHost.Add(new Host() { key = "Work: ", value = json[i].work });
+                        mItemsHost.Add(new Host() { key = "Address: ", value = json[i].address });
+                        mItemsHost.Add(new Host() { key = "Pay: ", value = "$" + json[i].pay.ToString() + "USD" });
+                        mItemsHost.Add(new Host() { key = "Age: ", value = json[i].age });
+                        mItemsHost.Add(new Host() { key = "Duration: ", value = json[i].duration });
+                        mItemsHost.Add(new Host() { key = "Date: ", value = temp });
+                        mItemsHost.Add(new Host() { key = "Space: ", value = json[i].spaceAvailable.ToString() });
+                        mItemsHost.Add(new Host() { key = "Gender: ", value = json[i].gender });
+                        
+                    }
+                    catch { }
+                }
+                
                 ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);
+                
                 mtxtHostKey.Adapter = adapter;
 
                 
