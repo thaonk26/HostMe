@@ -227,7 +227,97 @@ namespace TravelingApp
                         mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
                     }
                     catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
-                
+                try
+                {
+                    totalyJourney = schedule[1]["TotalJourney"];
+                    mItemsHost.Add(new Host() { key = "Flight Duration: ", value = totalyJourney["Duration"] });
+
+                    try
+                    {
+                        flight = schedule[1]["Flight"];
+                        departure = flight[1]["Departure"];
+                        string departureCode = departure["AirportCode"];
+                        string departureTime = departure["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Departure Code: ", value = departureCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Departure Time: ", value = departureTime });
+                    }
+                    catch
+                    {
+                       
+                    }
+                    try
+                    {
+                        flight = schedule[1]["Flight"];
+                        arrival = flight[1]["Arrival"];
+                        string arrivalCode = arrival["AirportCode"];
+                        string arrivalTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Arrival Code: ", value = arrivalCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Arrival Time: ", value = arrivalTime });
+                    }
+                    catch
+                    {
+                        
+                    }
+                    try
+                    {
+                        string departureTerminal = departure["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = departureTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = "To be Announced" }); }
+                    try
+                    {
+                        string arrivalTerminal = arrival["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
+                }
+                catch { }
+                try
+                {
+                    totalyJourney = schedule[2]["TotalJourney"];
+                    mItemsHost.Add(new Host() { key = "Flight Duration: ", value = totalyJourney["Duration"] });
+
+                    try
+                    {
+                        flight = schedule[2]["Flight"];
+                        departure = flight[2]["Departure"];
+                        string departureCode = departure["AirportCode"];
+                        string departureTime = departure["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Departure Code: ", value = departureCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Departure Time: ", value = departureTime });
+                    }
+                    catch
+                    {
+
+                    }
+                    try
+                    {
+                        flight = schedule[2]["Flight"];
+                        arrival = flight[2]["Arrival"];
+                        string arrivalCode = arrival["AirportCode"];
+                        string arrivalTime = arrival["ScheduledTimeLocal"]["DateTime"];
+                        mItemsHost.Add(new Host() { key = "Arrival Code: ", value = arrivalCode.ToString() });
+                        mItemsHost.Add(new Host() { key = "Arrival Time: ", value = arrivalTime });
+                    }
+                    catch
+                    {
+
+                    }
+                    try
+                    {
+                        string departureTerminal = departure["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = departureTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = "To be Announced" }); }
+                    try
+                    {
+                        string arrivalTerminal = arrival["Terminal"]["Name"];
+                        mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
+                    }
+                    catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
+                }
+                catch { }
+
                 ListViewAdapter adapter = new ListViewAdapter(Application.Context, mItemsHost);
                 mListViewKeyAirlines.Adapter = adapter;
             }
