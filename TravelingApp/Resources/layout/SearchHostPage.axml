@@ -3,96 +3,94 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:id="@+id/layout_country">
-                <TextView
-                    android:id="@+id/txtSearchCountry"
-                    android:layout_width="150dp"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="5dp"
-                    android:gravity="right"
-                    android:text="Enter Country:" />
-                <AutoCompleteTextView
-                    android:id="@+id/txtEditSearchCountry"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:theme="@style/Theme.Light.NoTitleBar.Workaround"
-                    android:hint="Search Country" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:id="@+id/layout_city">
-                <TextView
-                    android:id="@+id/txtSearchCity"
-                    android:layout_width="150dp"
-                    android:layout_height="25dp"
-                    android:gravity="right"
-                    android:layout_marginRight="5dp"
-                    android:text="Enter City:" />
-                <AutoCompleteTextView
-                    android:id="@+id/txtEditSearchCity"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:theme="@style/Theme.Light.NoTitleBar.Workaround"
-                    android:hint="Search City" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:id="@+id/layout_work">
-                <TextView
-                    android:id="@+id/txtSearchWork"
-                    android:layout_width="140dp"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="5dp"
-                    android:gravity="right"
-                    android:text="Enter Work Type:" />
-                <AutoCompleteTextView
-                    android:id="@+id/txtEditSearchWork"
-                    android:layout_width="180dp"
-                    android:layout_height="40dp"
-                    android:theme="@style/Theme.Light.NoTitleBar.Workaround"
-                    android:hint="Search Work Type" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:id="@+id/getHostSection">
-                <Button
-                    android:text="Search Host"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/Theme.Light.NoTitleBar.Workaround"
-                    android:id="@+id/btnSearchHost" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ListView_Section"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp">
-                <ListView
-                    android:id="@+id/txtHostListViewKey"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
-            </LinearLayout>
-
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/layout_country">
+        <TextView
+            android:id="@+id/txtSearchCountry"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:text="(Required)Enter Country:" />
+        <AutoCompleteTextView
+            android:id="@+id/txtEditSearchCountry"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:theme="@style/Theme.Light.NoTitleBar.Workaround"
+            android:hint="Search Country" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/layout_city">
+        <TextView
+            android:id="@+id/txtSearchCity"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:text="Enter City:" />
+        <AutoCompleteTextView
+            android:id="@+id/txtEditSearchCity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:theme="@style/Theme.Light.NoTitleBar.Workaround"
+            android:hint="Search City" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/layout_work">
+        <TextView
+            android:id="@+id/txtSearchWork"
+            android:layout_width="140dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:text="Enter Work Type:" />
+        <AutoCompleteTextView
+            android:id="@+id/txtEditSearchWork"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:theme="@style/Theme.Light.NoTitleBar.Workaround"
+            android:hint="Search Work Type" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/getHostSection">
+        <Button
+            android:text="Search Host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Light.NoTitleBar.Workaround"
+            android:id="@+id/btnSearchHost" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ListView_Section"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp">
+        <ListView
+            android:id="@+id/txtHostListViewKey"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
 </LinearLayout>

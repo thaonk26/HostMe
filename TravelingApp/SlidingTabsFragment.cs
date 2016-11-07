@@ -352,7 +352,7 @@ namespace TravelingApp
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
                 request.ContentType = "application/json";
                 request.Method = "GET";
-                request.Headers.Add("authorization", "Bearer f99p6j372m3n6uzxz7ee7afm");
+                request.Headers.Add("authorization", "Bearer 5gzev7qz5hrh2gh4fy4bx44n");
                 //request.Headers.Add("accept", "application/json");
                 using (WebResponse response = await request.GetResponseAsync())
                 {
