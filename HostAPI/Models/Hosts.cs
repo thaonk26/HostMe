@@ -1,6 +1,6 @@
 ﻿namespace HostAPI.Models
 {
-    class Hosts
+    public class Hosts
     {
         public int id { get; set; }
         public string country { get; set; }

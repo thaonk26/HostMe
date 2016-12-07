@@ -107,7 +107,8 @@ namespace TravelingApp
                 search.Click += (sender, e) =>
              {
 
-                 string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text;
+                 //string url = "http://hostapi.azurewebsites.net/api/hosts?search=" + country.Text;
+                 string url = "http://localhost:11716/api/hosts?search=" + country.Text;
                  if (city.Text != "") { url += "$" + city.Text; }
                  if (work.Text != "") { url += "$" + work.Text; }
                   //JsonValue json = await FetchHostAsync(url);
@@ -306,13 +307,13 @@ namespace TravelingApp
                     try
                     {
                         string departureTerminal = departure["Terminal"]["Name"];
-                        mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = departureTerminal });
+                        mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = departureTerminal.ToString() });
                     }
                     catch { mItemsHost.Add(new Host() { key = "Departure Terminal: ", value = "To be Announced" }); }
                     try
                     {
                         string arrivalTerminal = arrival["Terminal"]["Name"];
-                        mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal });
+                        mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = arrivalTerminal.ToString() });
                     }
                     catch { mItemsHost.Add(new Host() { key = "Arrival Terminal: ", value = "To be Announced" }); }
                 }
@@ -352,7 +353,7 @@ namespace TravelingApp
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
                 request.ContentType = "application/json";
                 request.Method = "GET";
-                request.Headers.Add("authorization", "Bearer 5gzev7qz5hrh2gh4fy4bx44n");
+                request.Headers.Add("authorization", "Bearer esxpp2dgxgyvqjkpeu22mw89");
                 //request.Headers.Add("accept", "application/json");
                 using (WebResponse response = await request.GetResponseAsync())
                 {

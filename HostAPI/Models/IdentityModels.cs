@@ -29,5 +29,7 @@ namespace HostAPI.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<HostAPI.Models.Hosts> Hosts { get; set; }
     }
 }

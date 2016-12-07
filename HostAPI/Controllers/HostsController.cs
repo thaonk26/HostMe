@@ -5,11 +5,18 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using HostAPI.Models;
+using System.IO;
+using System.Net.Http.Headers;
+using RestSharp;
+using System.Web;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
 
 namespace HostAPI.Controllers
 {
     public class HostsController : ApiController
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         Hosts[] hosts = new Hosts[]
 
 {
@@ -655,6 +662,7 @@ namespace HostAPI.Controllers
                             if (!myList.Contains(hosts[j]))
                             {
                                 myList.Add(hosts[j]);
+                                
                             }
                         }
 
@@ -739,6 +747,45 @@ namespace HostAPI.Controllers
                 //|| (x.city.ToLower() == param[i]));
                 //    myList.Concat(hosts).ToList();
             }
+            if (myList == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(myList);
+            }
+        }
+        public IHttpActionResult PostHost(string address, string country)
+        {
+          
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            Hosts hosts = new Hosts();
+            var test = db.Hosts.Where(x => x.pay == hosts.pay);
+            hosts.address = address;
+            hosts.country = country;
+
+            db.Hosts.Add(hosts);
+            db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = hosts.id }, hosts);
+        }
+        
+        public IHttpActionResult testing(string chicken)
+        {
+            List<Hosts> myList = new List<Hosts>();
+            Hosts hosts = new Hosts();
+            string[] param = chicken.Split('$');
+
+            for (var i = 0; i < param.Length; i++)
+            {
+                var host = db.Hosts.Where(x => x.address == chicken).FirstOrDefault();
+                myList.Add(host);
+            }
+
             if (myList == null)
             {
                 return NotFound();
